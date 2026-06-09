@@ -1278,7 +1278,7 @@
       kids: {
         title: "Cumpleaños Infantiles (Kids)",
         desc: "¡Los más chiquitos también tienen su lugar! Micro totalmente adaptado con burbujas, música infantil, karaoke fácil y la compañía de una coordinadora atenta a todo.",
-        gallery: ["Img/Fotos/Kids/webp/kids14_resultado.webp", "Img/Fotos/Kids/kids10.mp4", "Img/Fotos/Kids/webp/kids5_resultado.webp"],
+        gallery: ["Img/Fotos/Kids/webp/kids14_resultado.webp", "Img/Fotos/Kids/kids10.mp4", "Img/Fotos/Kids/kids5.jpg"],
         features: ["Requiere adulto responsable a bordo", "Volumen moderado", "Micrófonos y Just Dance Kids"],
         extras: ["Show de Spiderman o Mickey", "Animación infantil especializada"]
       },
@@ -1343,8 +1343,17 @@
       window.open(`https://wa.me/${numeroOficial}?text=${mensaje}`, '_blank');
     });
 
-    // Universal Lightbox
+    // Universal Lightbox & Fullscreen Video
     document.addEventListener('click', function(e) {
+      if (e.target.tagName === 'VIDEO' && !e.target.classList.contains('hero-video-bg')) {
+        if (e.target.requestFullscreen) {
+          e.target.requestFullscreen();
+        } else if (e.target.webkitEnterFullscreen) {
+          e.target.webkitEnterFullscreen();
+        }
+        return;
+      }
+
       if (e.target.tagName === 'IMG' && 
           !e.target.closest('a.logo') && 
           !e.target.closest('.exp-card') && 
