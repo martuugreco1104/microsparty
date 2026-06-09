@@ -378,12 +378,10 @@
 
       // Delegación de interacciones de tarjetas
       if (e.target.closest('.bento-item') || e.target.closest('.show-avatar') || e.target.closest('.exp-card')) {
-        // Excepción: Si hacemos click en la imagen dentro de la exp-card (y no queremos que abra el modal)
-        if (e.target.tagName === 'IMG' && e.target.closest('.exp-card')) {
-          // Dejamos que pase a la lógica del lightbox
-        } else {
-          return handleInteractiveClick(e.target);
+        if (e.target.closest('.show-avatar-checkbox')) {
+          return; // Permitir que el checkbox se tilde sin abrir el modal
         }
+        return handleInteractiveClick(e.target);
       }
 
       if (e.target.tagName === 'VIDEO' && !e.target.classList.contains('hero-video-bg')) {
