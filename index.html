@@ -195,22 +195,22 @@
       overflow: hidden;
     }
 
+    /* Overlay negro de baja opacidad para resaltar el texto */
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.55);
+      z-index: 0;
+    }
+
     .hero-video-bg {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.5; /* Aumentado para más visibilidad */
-      filter: saturate(1.2) contrast(1.1); /* Colores más vivos */
-      z-index: -2;
-    }
-    
-    .hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at center, rgba(136, 209, 196, 0.1) 0%, rgba(5,11,31,0.6) 60%, var(--bg-deep) 100%);
+      opacity: 0.8;
       z-index: -1;
     }
 
@@ -1126,7 +1126,7 @@
       mickey: ["Img/Fotos/Personajes/webp/mickey&sonic_resultado.webp", "Img/Fotos/Personajes/webp/mickey_resultado.webp", "Img/Fotos/Personajes/webp/messi&mickey_resultado.webp"],
       drag: ["Img/Fotos/Personajes/webp/drag1_resultado.webp", "Img/Fotos/Personajes/webp/spider&drag_resultado.webp", "Img/Fotos/Personajes/webp/spider&drag2_resultado.webp"],
       spider: ["Img/Fotos/Personajes/webp/spider&drag_resultado.webp", "Img/Fotos/Personajes/webp/spider&drag2_resultado.webp"],
-      messi: ["Img/Fotos/Personajes/webp/messi_resultado.webp", "Img/Fotos/Personajes/webp/messi1_resultado.webp", "Img/Fotos/Personajes/webp/messi2_resultado.webp", "Img/Fotos/Personajes/webp/messi3_resultado.webp", "Img/Fotos/Personajes/webp/messi4_resultado.webp", "Img/Fotos/Personajes/webp/messi&mickey_resultado.webp"],
+      messi: ["Img/Fotos/Personajes/webp/messi1_resultado.webp", "Img/Fotos/Personajes/webp/messi2_resultado.webp", "Img/Fotos/Personajes/webp/messi3_resultado.webp", "Img/Fotos/Personajes/webp/messi4_resultado.webp", "Img/Fotos/Personajes/webp/messi&mickey_resultado.webp"],
       milei: ["Img/Fotos/Personajes/webp/milei_resultado.webp", "Img/Fotos/Personajes/webp/milei2_resultado.webp", "Img/Fotos/Personajes/webp/mileivideo.MOV"]
     };
 
