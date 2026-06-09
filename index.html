@@ -697,6 +697,32 @@
       .exp-details-box { padding: 25px; }
       .cotizar-video { display: none; } /* Ocultar foto en mobile */
     }
+
+    /* Universal Lightbox */
+    #universal-lightbox {
+      display: none;
+      position: fixed;
+      z-index: 99999;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      align-items: center;
+      justify-content: center;
+    }
+    #universal-lightbox img {
+      max-width: 90%;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    .close-lightbox {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -843,7 +869,7 @@
 
         <!-- Tarjeta: Egresados & Murgas -->
         <div class="exp-card glass-card" onclick="openExpDetails('egresados')">
-          <div class="discount-badge" title="Descuento válido reservando con 30 días de anticipación">10% OFF anticipado</div>
+          <div class="discount-badge">10% OFF</div>
           <div class="img-wrapper">
             <img src="Img/Fotos/Egresados/webp/egresados6_resultado.webp" alt="Egresados">
           </div>
@@ -1237,7 +1263,7 @@
       },
       adultos: {
         title: "Cumpleaños de Adultos & Jubilaciones",
-        desc: "Nunca es tarde para subirse a la fiesta. Ideal para 30s, 40s, 50s o jubilaciones. Disfrutá de un paseo con tus seres queridos, pasarela de desfile, buena música y mucha emoción.",
+        desc: "Nunca es tarde para subirse a la fiesta. Ideal para 40s, 50s o jubilaciones. Disfrutá de un paseo con tus seres queridos, pasarela de desfile, buena música y mucha emoción.",
         gallery: ["Img/Fotos/cumpleaños-recibidas/webp/cumple02_resultado.webp", "Img/Fotos/cumpleaños-recibidas/cumple60 video.mp4", "Img/Fotos/cumpleaños-recibidas/webp/cumple11_resultado.webp"],
         features: ["Capacidad: Hasta 40 pasajeros", "Música de la época que prefieran", "Clima familiar o modo boliche"],
         extras: ["Pista de baile retro", "Fotógrafo profesional"]
@@ -1260,7 +1286,7 @@
         title: "Egresados & Murgas (10% OFF)",
         desc: "La previa definitiva de la Fiesta de Egresados (FDE) o el UPD. Hacemos el traslado al salón o al colegio a pura música y cánticos. Seguridad garantizada.",
         gallery: ["Img/Fotos/Egresados/webp/egresados6_resultado.webp", "Img/Fotos/Egresados/egresados4.mp4", "Img/Fotos/Egresados/webp/egresados15_resultado.webp"],
-        features: ["Capacidad: Hasta 40 pasajeros (viaje seguro)", "Choferes habilitados VTV", "Habilitación GCBA al día", "10% OFF reservando con 30+ días de anticipación"],
+        features: ["Capacidad: Hasta 40 pasajeros (viaje seguro)", "Choferes habilitados VTV", "Habilitación GCBA al día", "10% OFF"],
         extras: ["Humo y luces potentes", "Traslados extendidos"]
       },
       recibidas: {
@@ -1316,7 +1342,27 @@
       const numeroOficial = "5491135580896";
       window.open(`https://wa.me/${numeroOficial}?text=${mensaje}`, '_blank');
     });
+
+    // Universal Lightbox
+    document.addEventListener('click', function(e) {
+      if (e.target.tagName === 'IMG' && 
+          !e.target.closest('a.logo') && 
+          !e.target.closest('.exp-card') && 
+          !e.target.closest('.bento-item') && 
+          !e.target.closest('.show-avatar')) {
+        const lightbox = document.getElementById('universal-lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        lightboxImg.src = e.target.src;
+        lightbox.style.display = 'flex';
+      }
+    });
   </script>
+
+  <!-- Universal Lightbox HTML -->
+  <div id="universal-lightbox" onclick="this.style.display='none'">
+    <span class="close-lightbox">&times;</span>
+    <img id="lightbox-img" src="" alt="Fullscreen">
+  </div>
 </body>
 </html>
 
