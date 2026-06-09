@@ -18,8 +18,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="preload" href="Img/Fotos/Micros/webp/micros16_resultado.webp" as="image">
   <link rel="preload" href="Vid/hero.mp4" as="video" type="video/mp4">
-  <link rel="stylesheet" href="css/style.css?v=2">
-  <link rel="stylesheet" href="css/stepper.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="stylesheet" href="css/stepper.css?v=3">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -152,7 +152,7 @@
       
       <div class="buses-grid" id="busesGrid">
         <!-- Unidad Gold -->
-        <div class="unit-card">
+        <div class="unit-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
           <div class="unit-gallery">
             <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
             <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
@@ -163,7 +163,6 @@
           <div class="unit-info">
             <h3>UNIDAD GOLD ⚡️</h3>
             <div class="unit-differential">Máquina de humo y Smart TV</div>
-            <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
             <div class="unit-features-wrapper">
               <ul class="unit-features">
                 <li>Máquina de humo</li>
@@ -176,7 +175,7 @@
         </div>
 
         <!-- Unidad Black -->
-        <div class="unit-card">
+        <div class="unit-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
           <div class="unit-gallery">
             <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
             <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
@@ -187,7 +186,6 @@
           <div class="unit-info">
             <h3>UNIDAD BLACK ⚡️</h3>
             <div class="unit-differential">Estilo nocturno clásico</div>
-            <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
             <div class="unit-features-wrapper">
               <ul class="unit-features">
                 <li>Caño de Pole Dance</li>
@@ -198,72 +196,64 @@
         </div>
 
         <!-- Unidad Brown UV -->
-        <div class="unit-card">
+        <div class="unit-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
           <div class="unit-gallery">
             <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
             <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
             <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown1_resultado.webp" alt="Brown 1" class="active">
-            <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown2_resultado.webp" alt="Brown 2">
-            <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown3_resultado.webp" alt="Brown 3">
+            <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown4_resultado.webp" alt="Brown 4">
+            <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown5_resultado.webp" alt="Brown 5">
           </div>
           <div class="unit-info">
             <h3>UNIDAD BROWN UV ⚡️</h3>
-            <div class="unit-differential">Detalles UV neón</div>
-            <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
+            <div class="unit-differential">Pintura flúor y luces neón</div>
             <div class="unit-features-wrapper">
               <ul class="unit-features">
-                <li>Máquina de humo</li>
-                <li>4 cámaras de seguridad HD</li>
+                <li>Pintura interior reactiva a luz UV</li>
                 <li>Caño de Pole Dance</li>
-                <li>Smart TV con karaoke</li>
+                <li>(No incluye humo ni TV)</li>
               </ul>
             </div>
           </div>
         </div>
 
         <!-- Unidad Red II -->
-        <div class="unit-card">
+        <div class="unit-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
           <div class="unit-gallery">
             <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
             <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
             <img src="Img/Fotos/Unidades/UNIDAD RED II/red1_resultado.webp" alt="Red 1" class="active">
-            <img src="Img/Fotos/Unidades/UNIDAD RED II/red2_resultado.webp" alt="Red 2">
             <img src="Img/Fotos/Unidades/UNIDAD RED II/red3_resultado.webp" alt="Red 3">
+            <img src="Img/Fotos/Unidades/UNIDAD RED II/red6_resultado.webp" alt="Red 6">
           </div>
           <div class="unit-info">
             <h3>UNIDAD RED II ⚡️</h3>
-            <div class="unit-differential">Impacto visual rojizo</div>
-            <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
+            <div class="unit-differential">Diseño vibrante y llamativo</div>
             <div class="unit-features-wrapper">
               <ul class="unit-features">
-                <li>Máquina de humo</li>
-                <li>4 cámaras de seguridad HD</li>
                 <li>Caño de Pole Dance</li>
-                <li>Smart TV con karaoke</li>
+                <li>(No incluye humo ni TV)</li>
               </ul>
             </div>
           </div>
         </div>
 
         <!-- Unidad White -->
-        <div class="unit-card">
+        <div class="unit-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
           <div class="unit-gallery">
             <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
             <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
             <img src="Img/Fotos/Unidades/UNIDAD WHITE/white1_resultado.webp" alt="White 1" class="active">
-            <img src="Img/Fotos/Unidades/UNIDAD WHITE/white2_resultado.webp" alt="White 2">
-            <img src="Img/Fotos/Unidades/UNIDAD WHITE/white3_resultado.webp" alt="White 3">
+            <img src="Img/Fotos/Unidades/UNIDAD WHITE/white4_resultado.webp" alt="White 4">
+            <img src="Img/Fotos/Unidades/UNIDAD WHITE/white6_resultado.webp" alt="White 6">
           </div>
           <div class="unit-info">
             <h3>UNIDAD WHITE ⚡️</h3>
-            <div class="unit-differential">Estética blanca premium</div>
-            <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
+            <div class="unit-differential">Estética limpia y elegante</div>
             <div class="unit-features-wrapper">
               <ul class="unit-features">
-                <li>Máquina de humo</li>
-                <li>4 cámaras de seguridad HD</li>
                 <li>Caño de Pole Dance</li>
-                <li>Smart TV con karaoke</li>
+                <li>(No incluye humo ni TV)</li>
               </ul>
             </div>
           </div>
@@ -460,8 +450,18 @@
       
       <div class="shows-grid">
         <div class="show-avatar" data-gallery="mickey" tabindex="0" role="button" aria-label="Ver detalles del show">
-          <img loading="lazy" src="Img/Fotos/Personajes/webp/mickey&sonic_resultado.webp" alt="Show Mickey y Sonic" class="avatar-img">
-          <h4>Mickey & Sonic</h4>
+          <div class="show-avatar-checkbox">
+            <input type="checkbox" id="show-mickey" value="mickey">
+          </div>
+          <img class="avatar-img" src="Img/Fotos/Personajes/webp/mickey_resultado.webp" alt="Mickey">
+          <p>Mickey</p>
+        </div>
+        <div class="show-avatar" data-gallery="sonic" tabindex="0" role="button" aria-label="Ver detalles del show">
+          <div class="show-avatar-checkbox">
+            <input type="checkbox" id="show-sonic" value="sonic">
+          </div>
+          <img class="avatar-img" src="Img/Fotos/Personajes/webp/mickey&sonic_resultado.webp" alt="Sonic">
+          <p>Sonic</p>
         </div>
         <div class="show-avatar" data-gallery="drag" tabindex="0" role="button" aria-label="Ver detalles del show">
           <img loading="lazy" src="Img/Fotos/Personajes/webp/drag1_resultado.webp" alt="Show Drag Queen" class="avatar-img">
@@ -631,19 +631,18 @@
                   <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
                   <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
                   <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown1_resultado.webp" alt="Brown 1" class="active">
-                  <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown2_resultado.webp" alt="Brown 2">
-                  <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown3_resultado.webp" alt="Brown 3">
+                  <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown4_resultado.webp" alt="Brown 4">
+                  <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown5_resultado.webp" alt="Brown 5">
                 </div>
                 <div class="unit-info">
                   <h3>UNIDAD BROWN UV ⚡️</h3>
-                  <div class="unit-differential">Detalles UV neón</div>
+                  <div class="unit-differential">Pintura flúor y luces neón</div>
                   <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
                   <div class="unit-features-wrapper">
                     <ul class="unit-features">
-                      <li>Máquina de humo</li>
-                      <li>4 cámaras de seguridad HD</li>
+                      <li>Pintura interior reactiva a luz UV</li>
                       <li>Caño de Pole Dance</li>
-                      <li>Smart TV con karaoke</li>
+                      <li>(No incluye humo ni TV)</li>
                     </ul>
                   </div>
                 </div>
@@ -655,19 +654,17 @@
                   <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
                   <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
                   <img src="Img/Fotos/Unidades/UNIDAD RED II/red1_resultado.webp" alt="Red 1" class="active">
-                  <img src="Img/Fotos/Unidades/UNIDAD RED II/red2_resultado.webp" alt="Red 2">
                   <img src="Img/Fotos/Unidades/UNIDAD RED II/red3_resultado.webp" alt="Red 3">
+                  <img src="Img/Fotos/Unidades/UNIDAD RED II/red6_resultado.webp" alt="Red 6">
                 </div>
                 <div class="unit-info">
                   <h3>UNIDAD RED II ⚡️</h3>
-                  <div class="unit-differential">Impacto visual rojizo</div>
+                  <div class="unit-differential">Diseño vibrante y llamativo</div>
                   <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
                   <div class="unit-features-wrapper">
                     <ul class="unit-features">
-                      <li>Máquina de humo</li>
-                      <li>4 cámaras de seguridad HD</li>
                       <li>Caño de Pole Dance</li>
-                      <li>Smart TV con karaoke</li>
+                      <li>(No incluye humo ni TV)</li>
                     </ul>
                   </div>
                 </div>
@@ -679,19 +676,17 @@
                   <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
                   <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
                   <img src="Img/Fotos/Unidades/UNIDAD WHITE/white1_resultado.webp" alt="White 1" class="active">
-                  <img src="Img/Fotos/Unidades/UNIDAD WHITE/white2_resultado.webp" alt="White 2">
-                  <img src="Img/Fotos/Unidades/UNIDAD WHITE/white3_resultado.webp" alt="White 3">
+                  <img src="Img/Fotos/Unidades/UNIDAD WHITE/white4_resultado.webp" alt="White 4">
+                  <img src="Img/Fotos/Unidades/UNIDAD WHITE/white6_resultado.webp" alt="White 6">
                 </div>
                 <div class="unit-info">
                   <h3>UNIDAD WHITE ⚡️</h3>
-                  <div class="unit-differential">Estética blanca premium</div>
+                  <div class="unit-differential">Estética limpia y elegante</div>
                   <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
                   <div class="unit-features-wrapper">
                     <ul class="unit-features">
-                      <li>Máquina de humo</li>
-                      <li>4 cámaras de seguridad HD</li>
                       <li>Caño de Pole Dance</li>
-                      <li>Smart TV con karaoke</li>
+                      <li>(No incluye humo ni TV)</li>
                     </ul>
                   </div>
                 </div>
@@ -921,34 +916,21 @@
   <div class="modal-overlay" id="exp-modal">
     <div class="modal-close" onclick="closeModal('exp-modal')">&times;</div>
     <div class="modal-content">
-      <div class="exp-details-box">
+      <div class="modal-body">
         <h2 id="exp-title"></h2>
-        <p class="subtitle" id="exp-desc"></p>
-        
-        <div class="exp-details-gallery" id="exp-gallery">
-          <!-- Multimedia inyectada via JS -->
-        </div>
-        
-        <div class="exp-info-grid">
-          <div class="exp-info-block">
-            <h4>Características del Recorrido</h4>
-            <ul id="exp-features">
-              <li>Música personalizada</li>
-              <li>Chofer profesional</li>
-              <li>Fotos en paradas</li>
-            </ul>
+        <p id="exp-desc"></p>
+        <div class="exp-details-grid" style="margin-bottom: 20px;">
+          <div>
+            <h3>Características del Recorrido</h3>
+            <ul class="features-list" id="exp-features"></ul>
           </div>
-          <div class="exp-info-block">
-            <h4>Extras Sugeridos</h4>
-            <ul id="exp-extras">
-              <li>Shows en vivo (Robot, Drag, etc.)</li>
-              <li>Animación guiada</li>
-            </ul>
+          <div>
+            <h3>Extras Sugeridos</h3>
+            <ul class="features-list" id="exp-extras"></ul>
           </div>
         </div>
-        <div style="text-align:center;">
-          <a href="#cotizar" class="btn btn-primary" onclick="closeModal('exp-modal')">Quiero esta experiencia</a>
-        </div>
+        <div class="exp-gallery" id="exp-gallery"></div>
+      </div>
       </div>
     </div>
   </div>
@@ -958,8 +940,8 @@
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
-  <script src="js/main.js?v=2" defer></script>
-  <script src="js/stepper.js?v=2" defer></script>
+  <script src="js/main.js?v=3" defer></script>
+  <script src="js/stepper.js?v=3" defer></script>
 
   <!-- Universal Lightbox HTML -->
   <div id="universal-lightbox" tabindex="-1" aria-modal="true" role="dialog">

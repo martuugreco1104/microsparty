@@ -63,7 +63,8 @@
         "Img/Fotos/Monumentos/webp/cancha river_resultado.webp"
       ],
       // Shows Extra
-      mickey: ["Img/Fotos/Personajes/webp/mickey&sonic_resultado.webp", "Img/Fotos/Personajes/webp/mickey_resultado.webp", "Img/Fotos/Personajes/webp/messi&mickey_resultado.webp"],
+      mickey: ["Img/Fotos/Personajes/webp/mickey_resultado.webp", "Img/Fotos/Personajes/webp/messi&mickey_resultado.webp"],
+      sonic: ["Img/Fotos/Personajes/webp/mickey&sonic_resultado.webp"],
       drag: ["Img/Fotos/Personajes/webp/drag1_resultado.webp", "Img/Fotos/Personajes/webp/spider&drag_resultado.webp", "Img/Fotos/Personajes/webp/spider&drag2_resultado.webp"],
       spider: ["Img/Fotos/Personajes/webp/spider&drag_resultado.webp", "Img/Fotos/Personajes/webp/spider&drag2_resultado.webp"],
       messi: ["Img/Fotos/Personajes/webp/messi1_resultado.webp", "Img/Fotos/Personajes/webp/messi2_resultado.webp", "Img/Fotos/Personajes/webp/messi3_resultado.webp", "Img/Fotos/Personajes/webp/messi4_resultado.webp", "Img/Fotos/Personajes/webp/messi&mickey_resultado.webp"],

@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnNext = document.getElementById('btn-next-step');
     
     if (currentStep === TOTAL_STEPS) {
-      btnNext.innerText = "¡Cotizar por WhatsApp! 📲";
+      btnNext.innerText = "Cotizar 📲";
       btnNext.style.background = "#25D366";
       btnNext.style.boxShadow = "0 0 15px rgba(37, 211, 102, 0.4)";
     } else {
