@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MicroParty – La Fiesta Sobre Ruedas</title>
+  <meta name="description" content="El party bus más divertido de CABA y AMBA. Cumpleaños, despedidas, egresados, teens y más. Sonido Hi-Fi, efectos especiales y coordinadora a bordo.">
+  <meta property="og:title" content="MicroParty – La Fiesta Sobre Ruedas">
+  <meta property="og:description" content="Convertí cualquier festejo en una experiencia inolvidable. Party bus para todas las edades en CABA y AMBA.">
+  <meta property="og:image" content="Img/Fotos/Micros/webp/micros16_resultado.webp">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://martuugreco1104.github.io/microsparty/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="Img/Logos/Logo Micros Party (1).png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -679,6 +687,7 @@
     }
 
     @media (max-width: 768px) {
+      header nav a:not(.btn) { display: none; }
       section { padding: 60px 0; } /* Aún menos padding en mobile */
       .bento-grid { grid-template-columns: 1fr; grid-auto-rows: 200px; }
       .bento-large, .bento-wide { grid-column: span 1; grid-row: span 1; }
@@ -701,13 +710,17 @@
       <a href="#" class="logo">
         <img src="Img/Logos/Logo Micros Party (1).png" alt="MicroParty Logo" style="height: 60px; width: auto; object-fit: contain;">
       </a>
-      <a href="#cotizar" class="btn btn-outline">Cotizar Fecha</a>
+      <nav style="display: flex; align-items: center; gap: 28px;">
+        <a href="#experiencias" style="color: var(--text-muted); text-decoration: none; font-family: var(--font-title); font-size: 0.9rem; transition: color 0.3s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'">Festejos</a>
+        <a href="#shows" style="color: var(--text-muted); text-decoration: none; font-family: var(--font-title); font-size: 0.9rem; transition: color 0.3s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'">Shows</a>
+        <a href="#cotizar" class="btn btn-outline" style="padding: 12px 24px; font-size: 0.9rem;">Cotizar Fecha</a>
+      </nav>
     </div>
   </header>
 
   <!-- PORTADA DE IMPACTO -->
   <section class="hero">
-    <video class="hero-video-bg" autoplay loop muted playsinline poster="Img/Fotos/Micros/webp/micros16_resultado.webp">
+    <video class="hero-video-bg" autoplay loop muted playsinline poster="Img/Fotos/Micros/webp/micros16_resultado.webp" onerror="this.style.display='none'">
       <source src="Vid/hero.mp4" type="video/mp4">
     </video>
     <div class="container">
@@ -722,22 +735,48 @@
   <!-- MARQUESINA DE FOTOS -->
   <div class="marquee-container">
     <div class="marquee-track">
-      <!-- Original -->
-      <img src="Img/Fotos/Monumentos/webp/obelisco11_resultado.webp" alt="MicroParty Festejos">
-      <img src="Img/Fotos/teens/webp/teens1_resultado.webp" alt="MicroParty Festejos">
-      <img src="Img/Fotos/cumpleaños-recibidas/webp/cumple02_resultado.webp" alt="MicroParty Festejos">
-      <img src="Img/Fotos/Kids/webp/kids14_resultado.webp" alt="MicroParty Festejos">
-      <img src="Img/Fotos/Egresados/webp/egresados6_resultado.webp" alt="MicroParty Festejos">
-      <img src="Img/Fotos/Despedidas de soltero/webp/despedida2_resultado.webp" alt="MicroParty Festejos">
-      <!-- Duplicado para loop infinito -->
-      <img src="Img/Fotos/Monumentos/webp/obelisco11_resultado.webp" alt="MicroParty Festejos">
-      <img src="Img/Fotos/teens/webp/teens1_resultado.webp" alt="MicroParty Festejos">
-      <img src="Img/Fotos/cumpleaños-recibidas/webp/cumple02_resultado.webp" alt="MicroParty Festejos">
-      <img src="Img/Fotos/Kids/webp/kids14_resultado.webp" alt="MicroParty Festejos">
-      <img src="Img/Fotos/Egresados/webp/egresados6_resultado.webp" alt="MicroParty Festejos">
-      <img src="Img/Fotos/Despedidas de soltero/webp/despedida2_resultado.webp" alt="MicroParty Festejos">
+      <img src="Img/Fotos/Monumentos/webp/obelisco11_resultado.webp" alt="Fiesta en el Obelisco CABA">
+      <img src="Img/Fotos/teens/webp/teens1_resultado.webp" alt="Cumpleaños de 15 años en el micro">
+      <img src="Img/Fotos/cumpleaños-recibidas/webp/cumple02_resultado.webp" alt="Cumpleaños de adultos a bordo">
+      <img src="Img/Fotos/Kids/webp/kids14_resultado.webp" alt="Fiesta infantil con burbujas en el micro">
+      <img src="Img/Fotos/Egresados/webp/egresados6_resultado.webp" alt="Egresados celebrando en el party bus">
+      <img src="Img/Fotos/Despedidas de soltero/webp/despedida2_resultado.webp" alt="Despedida de soltera con coordinadora">
+      <img src="Img/Fotos/Monumentos/webp/obelisco11_resultado.webp" alt="Fiesta en el Obelisco CABA">
+      <img src="Img/Fotos/teens/webp/teens1_resultado.webp" alt="Cumpleaños de 15 años en el micro">
+      <img src="Img/Fotos/cumpleaños-recibidas/webp/cumple02_resultado.webp" alt="Cumpleaños de adultos a bordo">
+      <img src="Img/Fotos/Kids/webp/kids14_resultado.webp" alt="Fiesta infantil con burbujas en el micro">
+      <img src="Img/Fotos/Egresados/webp/egresados6_resultado.webp" alt="Egresados celebrando en el party bus">
+      <img src="Img/Fotos/Despedidas de soltero/webp/despedida2_resultado.webp" alt="Despedida de soltera con coordinadora">
     </div>
   </div>
+
+  <!-- CÓMO FUNCIONA -->
+  <section id="como-funciona" style="padding: 60px 0;">
+    <div class="container">
+      <h2 class="section-title">¿Cómo es la <span>experiencia</span>?</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; text-align: center; counter-reset: steps;">
+        
+        <div class="glass-card" style="padding: 35px 25px; position: relative;">
+          <div style="font-size: 2.5rem; margin-bottom: 15px;">📋</div>
+          <h3 style="font-family: var(--font-title); font-size: 1.2rem; margin-bottom: 12px; color: var(--accent);">1. Cotizás</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Completás el formulario o nos escribís por WhatsApp. Te respondemos en menos de 1 hora con precio y disponibilidad.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 35px 25px; position: relative;">
+          <div style="font-size: 2.5rem; margin-bottom: 15px;">📅</div>
+          <h3 style="font-family: var(--font-title); font-size: 1.2rem; margin-bottom: 12px; color: var(--accent);">2. Reservás la fecha</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Con una seña confirmamos tu fecha. Elegís el recorrido, la música y los extras que querés sumar.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 35px 25px; position: relative;">
+          <div style="font-size: 2.5rem; margin-bottom: 15px;">🎉</div>
+          <h3 style="font-family: var(--font-title); font-size: 1.2rem; margin-bottom: 12px; color: var(--accent);">3. ¡Nos subimos!</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">El micro llega a tu puerta. Coordinadora, sonido Hi-Fi y efectos especiales listos para que no pienses en nada más.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <!-- MÓDULO DE INFRAESTRUCTURA (CARRUSELES) -->
   <section id="infra">
@@ -831,7 +870,7 @@
 
         <!-- Tarjeta: Egresados & Murgas -->
         <div class="exp-card glass-card" onclick="openExpDetails('egresados')">
-          <div class="discount-badge">10% OFF</div>
+          <div class="discount-badge" title="Descuento válido reservando con 30 días de anticipación">10% OFF anticipado</div>
           <div class="img-wrapper">
             <img src="Img/Fotos/Egresados/webp/egresados6_resultado.webp" alt="Egresados">
           </div>
@@ -934,6 +973,58 @@
     </div>
   </section>
 
+  <!-- TESTIMONIOS -->
+  <section id="testimonios" style="padding: 60px 0;">
+    <div class="container">
+      <h2 class="section-title">Lo que dicen <span>nuestros pasajeros</span></h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+
+        <div class="glass-card" style="padding: 30px;">
+          <div style="display: flex; gap: 4px; margin-bottom: 15px;">
+            <span style="color: var(--accent);">★★★★★</span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">"Lo mejor de la despedida fue el micro. La coordinadora rompió todo, los juegos fueron increíbles y las fotos en el Obelisco quedaron épicas. Lo recomiendo sin dudarlo."</p>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 42px; height: 42px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: var(--bg-deep); font-family: var(--font-title); font-weight: 700; font-size: 1rem; flex-shrink: 0;">V</div>
+            <div>
+              <p style="font-family: var(--font-title); font-weight: 600; font-size: 0.95rem;">Valentina M.</p>
+              <p style="color: var(--text-muted); font-size: 0.82rem;">Despedida de soltera · CABA</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card" style="padding: 30px;">
+          <div style="display: flex; gap: 4px; margin-bottom: 15px;">
+            <span style="color: var(--accent);">★★★★★</span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">"Hicimos el micro para los egresados de nuestro curso y fue un exitazo. Llegamos al salón cantando y bailando. Un recuerdo que quedó para siempre."</p>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 42px; height: 42px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: var(--bg-deep); font-family: var(--font-title); font-weight: 700; font-size: 1rem; flex-shrink: 0;">F</div>
+            <div>
+              <p style="font-family: var(--font-title); font-weight: 600; font-size: 0.95rem;">Franco L.</p>
+              <p style="color: var(--text-muted); font-size: 0.82rem;">Egresados · Palermo</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card" style="padding: 30px;">
+          <div style="display: flex; gap: 4px; margin-bottom: 15px;">
+            <span style="color: var(--accent);">★★★★★</span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">"Los chicos no paraban de bailar. El show de Spiderman fue la locura, todos fliparon. Vale cada peso, súper recomendado para cumpleaños infantiles."</p>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 42px; height: 42px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: var(--bg-deep); font-family: var(--font-title); font-weight: 700; font-size: 1rem; flex-shrink: 0;">R</div>
+            <div>
+              <p style="font-family: var(--font-title); font-weight: 600; font-size: 0.95rem;">Rocío T.</p>
+              <p style="color: var(--text-muted); font-size: 0.82rem;">Cumpleaños infantil · GBA</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- FORMULARIO DE PRESUPUESTO -->
   <section id="cotizar">
     <div class="container">
@@ -979,7 +1070,8 @@
             </div>
             <button type="submit" class="btn btn-primary btn-submit">Solicitar Presupuesto por WhatsApp</button>
             <div style="text-align: center; margin-top: 25px;">
-              <p style="color: var(--text-muted);">¿Ya tenés otro presupuesto? <strong style="color: var(--text-main);">¡Mandanos los datos y te lo mejoramos!</strong><br>Consultar pagos con tarjeta de crédito.</p>
+              <p style="color: var(--text-muted);">📅 Respondemos en menos de 1 hora · Sin compromiso<br>
+              <span style="font-size: 0.9rem;">Aceptamos pagos con tarjeta de crédito en cuotas.</span></p>
             </div>
           </form>
         </div>
@@ -1027,8 +1119,8 @@
     <div class="modal-close" onclick="closeModal('exp-modal')">&times;</div>
     <div class="modal-content">
       <div class="exp-details-box">
-        <h2 id="exp-title">Título</h2>
-        <p class="subtitle" id="exp-desc">Descripción extendida.</p>
+        <h2 id="exp-title"></h2>
+        <p class="subtitle" id="exp-desc"></p>
         
         <div class="exp-details-gallery" id="exp-gallery">
           <!-- Multimedia inyectada via JS -->
@@ -1195,7 +1287,7 @@
         title: "Egresados & Murgas (10% OFF)",
         desc: "La previa definitiva de la Fiesta de Egresados (FDE) o el UPD. Hacemos el traslado al salón o al colegio a pura música y cánticos. Seguridad garantizada.",
         gallery: ["Img/Fotos/Egresados/webp/egresados6_resultado.webp", "Img/Fotos/Egresados/egresados4.mp4", "Img/Fotos/Egresados/webp/egresados15_resultado.webp"],
-        features: ["Capacidad: Hasta 40 pasajeros (viaje seguro)", "Choferes habilitados VTV", "Habilitación GCBA al día"],
+        features: ["Capacidad: Hasta 40 pasajeros (viaje seguro)", "Choferes habilitados VTV", "Habilitación GCBA al día", "10% OFF reservando con 30+ días de anticipación"],
         extras: ["Humo y luces potentes", "Traslados extendidos"]
       },
       recibidas: {
