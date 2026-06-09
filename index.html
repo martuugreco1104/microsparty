@@ -779,6 +779,17 @@
         border-color: transparent;
         box-shadow: none;
       }
+      .cursor-bubble {
+        position: fixed;
+        border-radius: 50%;
+        background: var(--accent);
+        pointer-events: none;
+        z-index: 999997;
+        opacity: 0.6;
+        transform: translateY(0) scale(1);
+        transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+        box-shadow: 0 0 8px var(--accent);
+      }
     }
   </style>
 </head>
@@ -1449,6 +1460,29 @@
         mouseX = e.clientX;
         mouseY = e.clientY;
         cursor.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+        
+        // Bubble trail logic
+        if (Math.random() > 0.6) {
+          const bubble = document.createElement('div');
+          bubble.className = 'cursor-bubble';
+          document.body.appendChild(bubble);
+          
+          const size = Math.random() * 8 + 4;
+          const offsetX = (Math.random() - 0.5) * 20;
+          const offsetY = (Math.random() - 0.5) * 20;
+          
+          bubble.style.width = `${size}px`;
+          bubble.style.height = `${size}px`;
+          bubble.style.left = `${mouseX + offsetX}px`;
+          bubble.style.top = `${mouseY + offsetY}px`;
+          
+          setTimeout(() => {
+            bubble.style.transform = `translateY(-${Math.random() * 40 + 20}px) scale(0)`;
+            bubble.style.opacity = '0';
+          }, 10);
+          
+          setTimeout(() => bubble.remove(), 800);
+        }
       });
       
       function animateCursor() {
