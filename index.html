@@ -16,7 +16,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="Img/Fotos/Micros/webp/micros16_resultado.webp" as="image">
+  <link rel="preload" href="Vid/hero.mp4" as="video" type="video/mp4">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/stepper.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -43,7 +46,7 @@
     <div class="container header-content">
       <div class="mobile-menu-toggle" onclick="document.getElementById('main-nav').classList.toggle('active')">☰</div>
       <a href="#" class="logo">
-        <img src="Img/Logos/Logo Micros Party (1).png" alt="MicrosParty Logo" style="height: 60px; width: auto; object-fit: contain;">
+        <img src="Img/Logos/Logo Micros Party (1).png" alt="MicrosParty Logo" fetchpriority="high" style="height: 60px; width: auto; object-fit: contain;">
       </a>
       <a href="#cotizar" class="btn btn-primary mobile-cta">Cotizar Fecha</a>
       <nav id="main-nav" style="display: flex; align-items: center; gap: 28px;">
@@ -73,18 +76,26 @@
   <!-- MARQUESINA DE FOTOS -->
   <div class="marquee-container">
     <div class="marquee-track">
-      <img loading="lazy" src="Img/Fotos/Monumentos/webp/obelisco11_resultado.webp" alt="Fiesta en el Obelisco CABA">
-      <img loading="lazy" src="Img/Fotos/teens/webp/teens1_resultado.webp" alt="Cumpleaños de 15 años en el micro">
-      <img loading="lazy" src="Img/Fotos/cumpleaños-recibidas/webp/cumple02_resultado.webp" alt="Cumpleaños de adultos a bordo">
-      <img loading="lazy" src="Img/Fotos/Kids/webp/kids14_resultado.webp" alt="Fiesta infantil con burbujas en el micro">
-      <img loading="lazy" src="Img/Fotos/Egresados/webp/egresados6_resultado.webp" alt="Egresados celebrando en el party bus">
-      <img loading="lazy" src="Img/Fotos/Despedidas de soltero/webp/despedida2_resultado.webp" alt="Despedida de soltera con coordinadora">
-      <img loading="lazy" src="Img/Fotos/Monumentos/webp/obelisco11_resultado.webp" alt="Fiesta en el Obelisco CABA">
-      <img loading="lazy" src="Img/Fotos/teens/webp/teens1_resultado.webp" alt="Cumpleaños de 15 años en el micro">
-      <img loading="lazy" src="Img/Fotos/cumpleaños-recibidas/webp/cumple02_resultado.webp" alt="Cumpleaños de adultos a bordo">
-      <img loading="lazy" src="Img/Fotos/Kids/webp/kids14_resultado.webp" alt="Fiesta infantil con burbujas en el micro">
-      <img loading="lazy" src="Img/Fotos/Egresados/webp/egresados6_resultado.webp" alt="Egresados celebrando en el party bus">
-      <img loading="lazy" src="Img/Fotos/Despedidas de soltero/webp/despedida2_resultado.webp" alt="Despedida de soltera con coordinadora">
+      <img loading="lazy" src="Img/Fotos/Micros/webp/micros16_resultado.webp" alt="Fiesta en el Partybus">
+      <img loading="lazy" src="Img/Fotos/Micros/webp/micros12_resultado.webp" alt="Luces del Partybus">
+      <img loading="lazy" src="Img/Fotos/Micros/webp/micros2_resultado.webp" alt="Sonido e iluminación a bordo">
+      <img loading="lazy" src="Img/Fotos/cumple adultos/cumple11_resultado_resultado.webp" alt="Cumpleaños en Partybus">
+      <img loading="lazy" src="Img/Fotos/Micros/webp/micros3_resultado.webp" alt="Fiesta dentro del Partybus">
+      <img loading="lazy" src="Img/Fotos/Despedidas de soltero/webp/despedida4_resultado.webp" alt="Despedida de Soltera">
+      <img loading="lazy" src="Img/Fotos/Despedidas de soltero/webp/despedida marquesina3.webp" alt="Despedida de Soltera en Micro">
+      <img loading="lazy" src="Img/Fotos/Micros/webp/micros8_resultado.webp" alt="Pista de baile del party bus">
+      <img loading="lazy" src="Img/Fotos/Egresados/egresados15_resultado.webp" alt="Egresados Partybus">
+      <img loading="lazy" src="Img/Fotos/Micros/webp/micros10_resultado.webp" alt="Frente del Partybus">
+      <img loading="lazy" src="Img/Fotos/Micros/webp/micros16_resultado.webp" alt="Fiesta en el Partybus">
+      <img loading="lazy" src="Img/Fotos/Micros/webp/micros12_resultado.webp" alt="Luces del Partybus">
+      <img loading="lazy" src="Img/Fotos/Micros/webp/micros2_resultado.webp" alt="Sonido e iluminación a bordo">
+      <img loading="lazy" src="Img/Fotos/cumple adultos/cumple11_resultado_resultado.webp" alt="Cumpleaños en Partybus">
+      <img loading="lazy" src="Img/Fotos/Micros/webp/micros3_resultado.webp" alt="Fiesta dentro del Partybus">
+      <img loading="lazy" src="Img/Fotos/Despedidas de soltero/webp/despedida4_resultado.webp" alt="Despedida de Soltera">
+      <img loading="lazy" src="Img/Fotos/Despedidas de soltero/webp/despedida marquesina3.webp" alt="Despedida de Soltera en Micro">
+      <img loading="lazy" src="Img/Fotos/Micros/webp/micros8_resultado.webp" alt="Pista de baile del party bus">
+      <img loading="lazy" src="Img/Fotos/Egresados/egresados15_resultado.webp" alt="Egresados Partybus">
+      <img loading="lazy" src="Img/Fotos/Micros/webp/micros10_resultado.webp" alt="Frente del Partybus">
     </div>
   </div>
 
@@ -132,6 +143,135 @@
     </div>
   </section>
 
+  <!-- SECCIÓN NUESTROS BUSES -->
+  <section id="buses">
+    <div class="container" style="position: relative;">
+      <h2 class="section-title">Nuestros <span>Buses</span></h2>
+      <button class="buses-nav prev" onclick="scrollBuses(-1)" style="position: absolute; left: 0; top: 55%; transform: translateY(-50%); background: rgba(136, 209, 196, 0.2); color: var(--accent); border: 1px solid var(--accent); width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 10; font-size: 1.2rem; display: flex; align-items: center; justify-content: center;">&#10094;</button>
+      <button class="buses-nav next" onclick="scrollBuses(1)" style="position: absolute; right: 0; top: 55%; transform: translateY(-50%); background: rgba(136, 209, 196, 0.2); color: var(--accent); border: 1px solid var(--accent); width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 10; font-size: 1.2rem; display: flex; align-items: center; justify-content: center;">&#10095;</button>
+      
+      <div class="buses-grid" id="busesGrid">
+        <!-- Unidad Gold -->
+        <div class="unit-card">
+          <div class="unit-gallery">
+            <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
+            <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
+            <img src="Img/Fotos/Unidades/UNIDAD GOLD/Gold1_resultado.webp" alt="Gold 1" class="active">
+            <img src="Img/Fotos/Unidades/UNIDAD GOLD/Gold3_resultado.webp" alt="Gold 3">
+            <img src="Img/Fotos/Unidades/UNIDAD GOLD/Gold5_resultado.webp" alt="Gold 5">
+          </div>
+          <div class="unit-info">
+            <h3>UNIDAD GOLD ⚡️</h3>
+            <div class="unit-differential">Máquina de humo y Smart TV</div>
+            <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
+            <div class="unit-features-wrapper">
+              <ul class="unit-features">
+                <li>Máquina de humo</li>
+                <li>4 cámaras de seguridad HD</li>
+                <li>Caño de Pole Dance</li>
+                <li>Smart TV con karaoke</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unidad Black -->
+        <div class="unit-card">
+          <div class="unit-gallery">
+            <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
+            <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
+            <img src="Img/Fotos/Unidades/UNIDAD BLACK/black1_resultado.webp" alt="Black 1" class="active">
+            <img src="Img/Fotos/Unidades/UNIDAD BLACK/black2_resultado.webp" alt="Black 2">
+            <img src="Img/Fotos/Unidades/UNIDAD BLACK/black4_resultado.webp" alt="Black 4">
+          </div>
+          <div class="unit-info">
+            <h3>UNIDAD BLACK ⚡️</h3>
+            <div class="unit-differential">Estilo nocturno clásico</div>
+            <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
+            <div class="unit-features-wrapper">
+              <ul class="unit-features">
+                <li>Caño de Pole Dance</li>
+                <li>(No incluye humo ni TV)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unidad Brown UV -->
+        <div class="unit-card">
+          <div class="unit-gallery">
+            <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
+            <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
+            <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown1_resultado.webp" alt="Brown 1" class="active">
+            <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown2_resultado.webp" alt="Brown 2">
+            <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown3_resultado.webp" alt="Brown 3">
+          </div>
+          <div class="unit-info">
+            <h3>UNIDAD BROWN UV ⚡️</h3>
+            <div class="unit-differential">Detalles UV neón</div>
+            <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
+            <div class="unit-features-wrapper">
+              <ul class="unit-features">
+                <li>Máquina de humo</li>
+                <li>4 cámaras de seguridad HD</li>
+                <li>Caño de Pole Dance</li>
+                <li>Smart TV con karaoke</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unidad Red II -->
+        <div class="unit-card">
+          <div class="unit-gallery">
+            <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
+            <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
+            <img src="Img/Fotos/Unidades/UNIDAD RED II/red1_resultado.webp" alt="Red 1" class="active">
+            <img src="Img/Fotos/Unidades/UNIDAD RED II/red2_resultado.webp" alt="Red 2">
+            <img src="Img/Fotos/Unidades/UNIDAD RED II/red3_resultado.webp" alt="Red 3">
+          </div>
+          <div class="unit-info">
+            <h3>UNIDAD RED II ⚡️</h3>
+            <div class="unit-differential">Impacto visual rojizo</div>
+            <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
+            <div class="unit-features-wrapper">
+              <ul class="unit-features">
+                <li>Máquina de humo</li>
+                <li>4 cámaras de seguridad HD</li>
+                <li>Caño de Pole Dance</li>
+                <li>Smart TV con karaoke</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unidad White -->
+        <div class="unit-card">
+          <div class="unit-gallery">
+            <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
+            <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
+            <img src="Img/Fotos/Unidades/UNIDAD WHITE/white1_resultado.webp" alt="White 1" class="active">
+            <img src="Img/Fotos/Unidades/UNIDAD WHITE/white2_resultado.webp" alt="White 2">
+            <img src="Img/Fotos/Unidades/UNIDAD WHITE/white3_resultado.webp" alt="White 3">
+          </div>
+          <div class="unit-info">
+            <h3>UNIDAD WHITE ⚡️</h3>
+            <div class="unit-differential">Estética blanca premium</div>
+            <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
+            <div class="unit-features-wrapper">
+              <ul class="unit-features">
+                <li>Máquina de humo</li>
+                <li>4 cámaras de seguridad HD</li>
+                <li>Caño de Pole Dance</li>
+                <li>Smart TV con karaoke</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SELECTOR DE EXPERIENCIAS -->
   <section id="experiencias">
     <div class="container">
@@ -139,63 +279,123 @@
       <div class="exp-grid">
         
         <!-- Tarjeta: Despedidas -->
-        <div class="exp-card glass-card" onclick="openExpDetails('despedidas')">
+        <div class="exp-card glass-card" data-exp="despedidas" tabindex="0" role="button" aria-label="Ver detalles de experiencia">
           <div class="img-wrapper">
-            <img loading="lazy" src="Img/Fotos/Despedidas de soltero/webp/despedida2_resultado.webp" alt="Despedidas de solteros">
+            <img loading="lazy" src="Img/Fotos/Despedidas de soltero/webp/Despedida portada_resultado.webp" alt="Despedidas de solteros" style="object-position: top center;">
           </div>
           <h3>Despedidas de Solteros/as</h3>
           <p>Juegos dinámicos, prendas y desafíos divertidos guiados por la coordinadora.</p>
           <div class="exp-link">Ver detalles</div>
         </div>
 
-        <!-- Tarjeta: Adultos & Jubilaciones -->
-        <div class="exp-card glass-card" onclick="openExpDetails('adultos')">
+        <!-- Tarjeta: Adultos -->
+        <div class="exp-card glass-card" data-exp="adultos" tabindex="0" role="button" aria-label="Ver detalles de experiencia">
           <div class="img-wrapper">
-            <img loading="lazy" src="Img/Fotos/cumpleaños-recibidas/webp/cumple02_resultado.webp" alt="Adultos">
+            <img loading="lazy" src="Img/Fotos/cumple adultos/cumple adultos portada_resultado.webp" alt="Adultos">
           </div>
-          <h3>Adultos & Jubilaciones</h3>
+          <h3>Cumpleaños de Adultos</h3>
           <p>Festejá a lo grande. Pasarela de desfile, baile del caño y limbo con palo LED.</p>
           <div class="exp-link">Ver detalles</div>
         </div>
 
-        <!-- Tarjeta: Teens & 15 años -->
-        <div class="exp-card glass-card" onclick="openExpDetails('teens')">
+        <!-- Tarjeta: Jubilaciones -->
+        <div class="exp-card glass-card" data-exp="jubilacion" tabindex="0" role="button" aria-label="Ver detalles de experiencia">
           <div class="img-wrapper">
-            <img loading="lazy" src="Img/Fotos/teens/webp/teens1_resultado.webp" alt="Teens">
+            <img loading="lazy" src="Img/Fotos/jubilacion/jubilacion_resultado_portada.webp" alt="Jubilaciones">
           </div>
-          <h3>Cumpleaños de 15 & Teens</h3>
+          <h3>Jubilaciones</h3>
+          <p>Celebrá esta nueva etapa en un entorno inigualable lleno de alegría y música.</p>
+          <div class="exp-link">Ver detalles</div>
+        </div>
+
+        <!-- Tarjeta: Cumpleaños 15 -->
+        <div class="exp-card glass-card" data-exp="xv" tabindex="0" role="button" aria-label="Ver detalles de experiencia">
+          <div class="img-wrapper">
+            <img loading="lazy" src="Img/Fotos/XV/quince portada.webp" alt="Cumpleaños 15">
+          </div>
+          <h3>Cumpleaños 15</h3>
+          <p>Una noche soñada. El mejor boliche rodante para entrar a tu fiesta a puro glamour.</p>
+          <div class="exp-link">Ver detalles</div>
+        </div>
+
+        <!-- Tarjeta: Teens -->
+        <div class="exp-card glass-card" data-exp="teens" tabindex="0" role="button" aria-label="Ver detalles de experiencia">
+          <div class="img-wrapper">
+            <img loading="lazy" src="Img/Fotos/teens/webp/teens1_portada.webp" alt="Teens">
+          </div>
+          <h3>Cumpleaños Teens</h3>
           <p>Música elegida por ustedes, TikTok trends, desafíos en la pista y paradas fotográficas.</p>
           <div class="exp-link">Ver detalles</div>
         </div>
 
         <!-- Tarjeta: Kids (Infantiles) -->
-        <div class="exp-card glass-card" onclick="openExpDetails('kids')">
+        <div class="exp-card glass-card" data-exp="kids" tabindex="0" role="button" aria-label="Ver detalles de experiencia">
           <div class="img-wrapper">
-            <img loading="lazy" src="Img/Fotos/Kids/webp/kids14_resultado.webp" alt="Kids">
+            <img loading="lazy" src="Img/Fotos/Kids/kids16_portada.webp" alt="Kids">
           </div>
           <h3>Kids (Cumples Infantiles)</h3>
           <p>Karaoke, Just Dance, burbujas y animación guiada para que todos los chicos se diviertan.</p>
           <div class="exp-link">Ver detalles</div>
         </div>
 
+        <!-- Tarjeta: Egresados Jardín & Primaria -->
+        <div class="exp-card glass-card" data-exp="egresados_infantiles" tabindex="0" role="button" aria-label="Ver detalles de experiencia">
+          <div class="img-wrapper">
+            <img loading="lazy" src="Img/Fotos/Egresados Jardin & Primaria/Egresados_Kids_Portada.webp" alt="Egresados Infantil">
+          </div>
+          <h3>Egresados Jardín & Primaria</h3>
+          <p>Paseo súper cuidado con coordinación para celebrar el fin de ciclo a pura sonrisa.</p>
+          <div class="exp-link">Ver detalles</div>
+        </div>
+
         <!-- Tarjeta: Egresados & Murgas -->
-        <div class="exp-card glass-card" onclick="openExpDetails('egresados')">
+        <div class="exp-card glass-card" data-exp="egresados" tabindex="0" role="button" aria-label="Ver detalles de experiencia">
           <div class="discount-badge">10% OFF</div>
           <div class="img-wrapper">
-            <img loading="lazy" src="Img/Fotos/Egresados/webp/egresados6_resultado.webp" alt="Egresados">
+            <img loading="lazy" src="Img/Fotos/Egresados/egresados16portada.jpg" alt="Egresados">
           </div>
-          <h3>Egresados & Murgas</h3>
+          <h3>Egresados Secundarios & Murgas</h3>
           <p>La previa definitiva de la FDE. Viajen tranquilos con chofer profesional y habilitaciones.</p>
           <div class="exp-link">Ver detalles</div>
         </div>
 
         <!-- Tarjeta: Recibidas -->
-        <div class="exp-card glass-card" onclick="openExpDetails('recibidas')">
+        <div class="exp-card glass-card" data-exp="recibidas" tabindex="0" role="button" aria-label="Ver detalles de experiencia">
           <div class="img-wrapper">
-            <img loading="lazy" src="Img/Fotos/cumpleaños-recibidas/webp/recibidamedica2_resultado.webp" alt="Recibidas">
+            <img loading="lazy" src="Img/Fotos/recibidas/portada recibida_resultado.webp" alt="Recibidas">
           </div>
           <h3>Recibidas Universitarias</h3>
           <p>El micro te pasa a buscar por la facu para empezar la caravana más feliz de tu vida.</p>
+          <div class="exp-link">Ver detalles</div>
+        </div>
+
+        <!-- Tarjeta: Campeones -->
+        <div class="exp-card glass-card" data-exp="campeones" tabindex="0" role="button" aria-label="Ver detalles de experiencia">
+          <div class="img-wrapper">
+            <img loading="lazy" src="Img/Fotos/campeones/campeones2_portada.webp" alt="Campeones">
+          </div>
+          <h3>Festejo de Campeones</h3>
+          <p>Un paseo épico con banderas, cantos y festejos descontrolados para el plantel campeón de tu club.</p>
+          <div class="exp-link">Ver detalles</div>
+        </div>
+
+        <!-- Tarjeta: Previa -->
+        <div class="exp-card glass-card" data-exp="previa" tabindex="0" role="button" aria-label="Ver detalles de experiencia">
+          <div class="img-wrapper">
+            <img loading="lazy" src="Img/Fotos/previa/previa portada_resultado.webp" alt="Previa">
+          </div>
+          <h3>La Previa</h3>
+          <p>Arrancá la noche con nosotros antes de ir al boliche. La mejor música y clima fiestero.</p>
+          <div class="exp-link">Ver detalles</div>
+        </div>
+
+        <!-- Tarjeta: Traslado Aeroparque -->
+        <div class="exp-card glass-card" data-exp="aeroparque" tabindex="0" role="button" aria-label="Ver detalles de experiencia">
+          <div class="img-wrapper">
+            <img loading="lazy" src="Img/Fotos/translado aeroparque/transladoaeroparque_resultado.webp" alt="Aeroparque">
+          </div>
+          <h3>Traslado Aeroparque</h3>
+          <p>Empezá tus vacaciones o tu viaje de egresados desde que salís de tu casa hasta el aeropuerto.</p>
           <div class="exp-link">Ver detalles</div>
         </div>
 
@@ -208,7 +408,7 @@
     <div class="container">
       <h2 class="section-title">Paradas <span>Icónicas</span></h2>
       <div class="bento-grid">
-        <div class="bento-item bento-large" onclick="openGallery('obelisco')">
+        <div class="bento-item bento-large" data-gallery="obelisco" tabindex="0" role="button" aria-label="Ver galería">
           <img loading="lazy" src="Img/Fotos/Monumentos/webp/obelisco11_resultado.webp" alt="Obelisco">
           <div class="bento-content">
             <h4>El Obelisco</h4>
@@ -216,7 +416,7 @@
           </div>
         </div>
         
-        <div class="bento-item" onclick="openGallery('planetario')">
+        <div class="bento-item" data-gallery="planetario" tabindex="0" role="button" aria-label="Ver galería">
           <img loading="lazy" src="Img/Fotos/Monumentos/webp/planetario3_resultado.webp" alt="Planetario">
           <div class="bento-content">
             <h4>Planetario</h4>
@@ -224,7 +424,7 @@
           </div>
         </div>
         
-        <div class="bento-item" onclick="openGallery('madero')">
+        <div class="bento-item" data-gallery="madero" tabindex="0" role="button" aria-label="Ver galería">
           <img loading="lazy" src="Img/Fotos/Monumentos/webp/ptomadero_resultado.webp" alt="Puerto Madero">
           <div class="bento-content">
             <h4>Puerto Madero</h4>
@@ -232,7 +432,7 @@
           </div>
         </div>
 
-        <div class="bento-item" onclick="openGallery('boca')">
+        <div class="bento-item" data-gallery="boca" tabindex="0" role="button" aria-label="Ver galería">
           <img loading="lazy" src="Img/Fotos/Monumentos/webp/canchadeboca5_resultado.webp" alt="Cancha de Boca">
           <div class="bento-content">
             <h4>La Bombonera</h4>
@@ -240,7 +440,7 @@
           </div>
         </div>
 
-        <div class="bento-item bento-wide" onclick="openGallery('river')">
+        <div class="bento-item bento-wide" data-gallery="river" tabindex="0" role="button" aria-label="Ver galería">
           <img loading="lazy" src="Img/Fotos/Monumentos/webp/cancha river_resultado.webp" alt="Cancha de River">
           <div class="bento-content">
             <h4>El Monumental</h4>
@@ -259,25 +459,45 @@
       <p style="text-align: center; color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Agregá personajes en vivo para darle un toque espectacular a tu recorrido. Tocá cada uno para ver más.</p>
       
       <div class="shows-grid">
-        <div class="show-avatar" onclick="openGallery('mickey')">
+        <div class="show-avatar" data-gallery="mickey" tabindex="0" role="button" aria-label="Ver detalles del show">
           <img loading="lazy" src="Img/Fotos/Personajes/webp/mickey&sonic_resultado.webp" alt="Show Mickey y Sonic" class="avatar-img">
           <h4>Mickey & Sonic</h4>
         </div>
-        <div class="show-avatar" onclick="openGallery('drag')">
+        <div class="show-avatar" data-gallery="drag" tabindex="0" role="button" aria-label="Ver detalles del show">
           <img loading="lazy" src="Img/Fotos/Personajes/webp/drag1_resultado.webp" alt="Show Drag Queen" class="avatar-img">
           <h4>Drag Queen</h4>
         </div>
-        <div class="show-avatar" onclick="openGallery('spider')">
+        <div class="show-avatar" data-gallery="spider" tabindex="0" role="button" aria-label="Ver detalles del show">
           <img loading="lazy" src="Img/Fotos/Personajes/webp/spider&drag_resultado.webp" alt="Show Spiderman" class="avatar-img">
           <h4>Spiderman</h4>
         </div>
-        <div class="show-avatar" onclick="openGallery('messi')">
+        <div class="show-avatar" data-gallery="messi" tabindex="0" role="button" aria-label="Ver detalles del show">
           <img loading="lazy" src="Img/Fotos/Personajes/webp/messi1_resultado.webp" alt="Animador Messi" class="avatar-img">
           <h4>Messi</h4>
         </div>
-        <div class="show-avatar" onclick="openGallery('milei')">
+        <div class="show-avatar" data-gallery="milei" tabindex="0" role="button" aria-label="Ver detalles del show">
           <img loading="lazy" src="Img/Fotos/Personajes/webp/milei_resultado.webp" alt="Animador Milei" class="avatar-img">
           <h4>Milei</h4>
+        </div>
+        <div class="show-avatar" data-gallery="stripper_mujer" tabindex="0" role="button" aria-label="Ver detalles del show">
+          <div class="show-avatar-circle" style="width: 100px; height: 100px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 3rem; margin: 0 auto 1rem;">💃</div>
+          <h4>Stripper Mujer</h4>
+        </div>
+        <div class="show-avatar" data-gallery="stripper_hombre" tabindex="0" role="button" aria-label="Ver detalles del show">
+          <div class="show-avatar-circle" style="width: 100px; height: 100px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 3rem; margin: 0 auto 1rem;">🕺</div>
+          <h4>Stripper Hombre</h4>
+        </div>
+        <div class="show-avatar" data-gallery="bizarrap" tabindex="0" role="button" aria-label="Ver detalles del show">
+          <div class="show-avatar-circle" style="width: 100px; height: 100px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 3rem; margin: 0 auto 1rem;">🧢</div>
+          <h4>Bizarrap</h4>
+        </div>
+        <div class="show-avatar" data-gallery="enanos" tabindex="0" role="button" aria-label="Ver detalles del show">
+          <div class="show-avatar-circle" style="width: 100px; height: 100px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 3rem; margin: 0 auto 1rem;">🎩</div>
+          <h4>Enanos</h4>
+        </div>
+        <div class="show-avatar" data-gallery="robot" tabindex="0" role="button" aria-label="Ver detalles del show">
+          <img loading="lazy" src="Img/Fotos/Personajes/webp/robot_resultado.webp" alt="Robot LED" class="avatar-img">
+          <h4>Robot LED</h4>
         </div>
       </div>
     </div>
@@ -335,58 +555,331 @@
     </div>
   </section>
 
-  <!-- FORMULARIO DE PRESUPUESTO -->
-  <section id="cotizar">
-    <div class="container">
+  <!-- FORMULARIO DE PRESUPUESTO (STEPPER) -->
+  <section id="cotizar" style="padding: 60px 0;">
+    <div class="container" style="max-width: 1200px;">
       <h2 class="section-title">Cotizá <span>tu fecha</span></h2>
-      <div class="cotizar-grid">
+      <p style="text-align: center; color: var(--text-muted); font-size: 1.1rem; margin-bottom: 40px;">Completá los 5 pasos rápidos para que te armemos el mejor presupuesto por WhatsApp.</p>
+      
+      <!-- COMPONENTE CALCULADORA DE PRESUPUESTO -->
+      <div class="micros-stepper-container" id="micros-stepper">
+        <!-- Barra de progreso -->
+        <div class="stepper-progress-wrapper">
+          <div class="stepper-progress-fill" id="stepper-progress-fill"></div>
+        </div>
         
-        <div class="cotizar-video">
-          <img loading="lazy" src="Img/Fotos/Despedidas de soltero/webp/despedida_resultado.webp" alt="Festejos" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;">
+        <div class="stepper-header">
+          <h2 class="stepper-title" id="stepper-title">Unidad</h2>
+          <span class="stepper-indicator" id="stepper-indicator">Paso 1 de 5</span>
         </div>
 
-        <div class="form-container glass-card">
-          <form id="presupuesto-form">
-            <div class="form-grid">
-              <div class="form-group full">
-                <label for="nombre">Nombre Completo</label>
-                <input type="text" id="nombre" placeholder="Ej: Juan Pérez" required>
+        <div class="stepper-body">
+          <!-- PASO 1: UNIDAD -->
+          <div class="stepper-step active" id="step-1">
+            <p class="step-description">Selecciona el Partybus ideal para tu noche. (Deslizá para ver más)</p>
+            <div class="unit-scroll-container">
+              
+              <!-- Tarjeta Gold -->
+              <div class="unit-card" data-value="Unidad Gold" onclick="selectCard(this, 'unidad')">
+                <div class="unit-gallery">
+                  <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
+                  <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
+                  <img src="Img/Fotos/Unidades/UNIDAD GOLD/Gold1_resultado.webp" alt="Gold 1" class="active">
+                  <img src="Img/Fotos/Unidades/UNIDAD GOLD/Gold3_resultado.webp" alt="Gold 3">
+                  <img src="Img/Fotos/Unidades/UNIDAD GOLD/Gold5_resultado.webp" alt="Gold 5">
+                </div>
+                <div class="unit-info">
+                  <h3>UNIDAD GOLD ⚡️</h3>
+                  <div class="unit-differential">Máquina de humo y Smart TV</div>
+                  <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
+                  <div class="unit-features-wrapper">
+                    <ul class="unit-features">
+                      <li>Máquina de humo</li>
+                      <li>4 cámaras de seguridad HD</li>
+                      <li>Caño de Pole Dance</li>
+                      <li>Smart TV con karaoke</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="whatsapp">WhatsApp de contacto</label>
-                <input type="tel" id="whatsapp" placeholder="Ej: 11 5555 5555" required>
-              </div>
-              <div class="form-group">
-                <label for="evento">Tipo de Evento</label>
-                <select id="evento" required>
-                  <option value="" disabled selected>Elegí cómo festejar...</option>
-                  <option value="Cumpleaños de Adultos">Cumpleaños de Adultos</option>
-                  <option value="Despedida">Despedida de Soltero/a</option>
-                  <option value="Teens">15 Años & Teens</option>
-                  <option value="Kids">Infantiles (Kids)</option>
-                  <option value="Egresados">Egresados / Murgas</option>
-                  <option value="Recibida">Recibida</option>
-                  <option value="Otro">Otro</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="fecha">Fecha Estimada</label>
-                <input type="date" id="fecha" required>
-              </div>
-              <div class="form-group">
-                <label for="pasajeros">Cantidad de Pasajeros</label>
-                <input type="number" id="pasajeros" placeholder="Ej: 30" required>
-              </div>
-            </div>
-            <button type="submit" class="btn btn-primary btn-submit">Solicitar Presupuesto por WhatsApp</button>
-            <div style="text-align: center; margin-top: 25px;">
-              <p style="color: var(--text-muted);">
-              <span style="font-size: 0.9rem;">Aceptamos pagos con tarjeta de crédito en cuotas.</span></p>
-            </div>
-          </form>
-        </div>
 
+              <!-- Tarjeta Black -->
+              <div class="unit-card" data-value="Unidad Black" onclick="selectCard(this, 'unidad')">
+                <div class="unit-gallery">
+                  <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
+                  <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
+                  <img src="Img/Fotos/Unidades/UNIDAD BLACK/black1_resultado.webp" alt="Black 1" class="active">
+                  <img src="Img/Fotos/Unidades/UNIDAD BLACK/black2_resultado.webp" alt="Black 2">
+                  <img src="Img/Fotos/Unidades/UNIDAD BLACK/black4_resultado.webp" alt="Black 4">
+                </div>
+                <div class="unit-info">
+                  <h3>UNIDAD BLACK ⚡️</h3>
+                  <div class="unit-differential">Estilo nocturno clásico</div>
+                  <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
+                  <div class="unit-features-wrapper">
+                    <ul class="unit-features">
+                      <li>Caño de Pole Dance</li>
+                      <li>(No incluye humo ni TV)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta Brown UV -->
+              <div class="unit-card" data-value="Unidad Brown UV" onclick="selectCard(this, 'unidad')">
+                <div class="unit-gallery">
+                  <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
+                  <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
+                  <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown1_resultado.webp" alt="Brown 1" class="active">
+                  <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown2_resultado.webp" alt="Brown 2">
+                  <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown3_resultado.webp" alt="Brown 3">
+                </div>
+                <div class="unit-info">
+                  <h3>UNIDAD BROWN UV ⚡️</h3>
+                  <div class="unit-differential">Detalles UV neón</div>
+                  <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
+                  <div class="unit-features-wrapper">
+                    <ul class="unit-features">
+                      <li>Máquina de humo</li>
+                      <li>4 cámaras de seguridad HD</li>
+                      <li>Caño de Pole Dance</li>
+                      <li>Smart TV con karaoke</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta Red II -->
+              <div class="unit-card" data-value="Unidad Red II" onclick="selectCard(this, 'unidad')">
+                <div class="unit-gallery">
+                  <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
+                  <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
+                  <img src="Img/Fotos/Unidades/UNIDAD RED II/red1_resultado.webp" alt="Red 1" class="active">
+                  <img src="Img/Fotos/Unidades/UNIDAD RED II/red2_resultado.webp" alt="Red 2">
+                  <img src="Img/Fotos/Unidades/UNIDAD RED II/red3_resultado.webp" alt="Red 3">
+                </div>
+                <div class="unit-info">
+                  <h3>UNIDAD RED II ⚡️</h3>
+                  <div class="unit-differential">Impacto visual rojizo</div>
+                  <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
+                  <div class="unit-features-wrapper">
+                    <ul class="unit-features">
+                      <li>Máquina de humo</li>
+                      <li>4 cámaras de seguridad HD</li>
+                      <li>Caño de Pole Dance</li>
+                      <li>Smart TV con karaoke</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta White -->
+              <div class="unit-card" data-value="Unidad White" onclick="selectCard(this, 'unidad')">
+                <div class="unit-gallery">
+                  <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
+                  <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
+                  <img src="Img/Fotos/Unidades/UNIDAD WHITE/white1_resultado.webp" alt="White 1" class="active">
+                  <img src="Img/Fotos/Unidades/UNIDAD WHITE/white2_resultado.webp" alt="White 2">
+                  <img src="Img/Fotos/Unidades/UNIDAD WHITE/white3_resultado.webp" alt="White 3">
+                </div>
+                <div class="unit-info">
+                  <h3>UNIDAD WHITE ⚡️</h3>
+                  <div class="unit-differential">Estética blanca premium</div>
+                  <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
+                  <div class="unit-features-wrapper">
+                    <ul class="unit-features">
+                      <li>Máquina de humo</li>
+                      <li>4 cámaras de seguridad HD</li>
+                      <li>Caño de Pole Dance</li>
+                      <li>Smart TV con karaoke</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            
+            <!-- Texto base comun -->
+            <div class="base-features-box">
+              <span>⚡ Todas las unidades incluyen de base:</span> DJ en vivo, pista de baile, cabezal LED giratorio con bola RGB, sistema láser audiorítmico y sonido envolvente.
+            </div>
+          </div>
+
+          <!-- PASO 2: EVENTO -->
+          <div class="stepper-step" id="step-2">
+            <p class="step-description">¿Qué tipo de evento estás planeando?</p>
+            <div class="options-grid">
+              <button class="option-btn" onclick="selectOption(this, 'evento')" data-value="Despedida de soltero/as">🎉 Despedida de soltero/as</button>
+              <button class="option-btn" onclick="selectOption(this, 'evento')" data-value="Cumpleaños de Adultos">🥂 Cumpleaños de Adultos</button>
+              <button class="option-btn" onclick="selectOption(this, 'evento')" data-value="Jubilaciones">🏆 Jubilaciones</button>
+              <button class="option-btn" onclick="selectOption(this, 'evento')" data-value="Cumpleaños 15">✨ Cumpleaños 15</button>
+              <button class="option-btn" onclick="selectOption(this, 'evento')" data-value="Cumpleaños Teens">😎 Cumpleaños Teens</button>
+              <button class="option-btn" onclick="selectOption(this, 'evento')" data-value="Kids (cumples infantiles)">🎈 Kids (cumples infantiles)</button>
+              <button class="option-btn" onclick="selectOption(this, 'evento')" data-value="Egresados Jardín & Primaria">🎨 Egresados Jardín & Primaria</button>
+              <button class="option-btn" onclick="selectOption(this, 'evento')" data-value="Egresados & Murgas">🎓 Egresados Secundarios & Murgas</button>
+              <button class="option-btn" onclick="selectOption(this, 'evento')" data-value="Recibidas universitarias">🎓 Recibidas universitarias</button>
+              <button class="option-btn" onclick="selectOption(this, 'evento')" data-value="Festejo de Campeones">🥇 Festejo de Campeones</button>
+              <button class="option-btn" onclick="selectOption(this, 'evento')" data-value="La Previa">🍻 La Previa</button>
+              <button class="option-btn" onclick="selectOption(this, 'evento')" data-value="Traslado Aeroparque">✈️ Traslado Aeroparque</button>
+              <button class="option-btn" onclick="selectOption(this, 'evento')" data-value="Otro">💬 Otro</button>
+            </div>
+          </div>
+
+          <!-- PASO 3: EXTRAS -->
+          <div class="stepper-step" id="step-3">
+            <p class="step-description">Potencia tu fiesta sumando shows y personajes exclusivos.</p>
+            <div class="shows-circle-grid">
+              
+              <label class="show-avatar-checkbox">
+                <input type="checkbox" name="extra" value="Sonic 🦔">
+                <div class="show-avatar-circle">
+                  <img src="Img/Fotos/Personajes/webp/mickey&sonic_resultado.webp" alt="Sonic">
+                </div>
+                <h4>Sonic</h4>
+              </label>
+              
+              <label class="show-avatar-checkbox">
+                <input type="checkbox" name="extra" value="Hombre Araña 🕷️">
+                <div class="show-avatar-circle">
+                  <img src="Img/Fotos/Personajes/webp/spider&drag_resultado.webp" alt="Spiderman">
+                </div>
+                <h4>Hombre Araña</h4>
+              </label>
+              
+              <label class="show-avatar-checkbox">
+                <input type="checkbox" name="extra" value="Milei 🦁">
+                <div class="show-avatar-circle">
+                  <img src="Img/Fotos/Personajes/webp/milei_resultado.webp" alt="Milei">
+                </div>
+                <h4>Milei</h4>
+              </label>
+
+              <label class="show-avatar-checkbox">
+                <input type="checkbox" name="extra" value="Bizarrap 🧢">
+                <div class="show-avatar-circle">🧢</div>
+                <h4>Bizarrap</h4>
+              </label>
+
+              <label class="show-avatar-checkbox">
+                <input type="checkbox" name="extra" value="Mickey 🐭">
+                <div class="show-avatar-circle">
+                  <img src="Img/Fotos/Personajes/webp/mickey_resultado.webp" alt="Mickey">
+                </div>
+                <h4>Mickey</h4>
+              </label>
+
+              <label class="show-avatar-checkbox">
+                <input type="checkbox" name="extra" value="Dragqueen 👠">
+                <div class="show-avatar-circle">
+                  <img src="Img/Fotos/Personajes/webp/drag1_resultado.webp" alt="Dragqueen">
+                </div>
+                <h4>Dragqueen</h4>
+              </label>
+
+              <label class="show-avatar-checkbox">
+                <input type="checkbox" name="extra" value="Stripper Hombre 🕺">
+                <div class="show-avatar-circle">🕺</div>
+                <h4>Stripper Hombre</h4>
+              </label>
+
+              <label class="show-avatar-checkbox">
+                <input type="checkbox" name="extra" value="Stripper Mujer 💃">
+                <div class="show-avatar-circle">💃</div>
+                <h4>Stripper Mujer</h4>
+              </label>
+
+              <label class="show-avatar-checkbox">
+                <input type="checkbox" name="extra" value="Profesora Pole Dance 🤸‍♀️">
+                <div class="show-avatar-circle">🤸‍♀️</div>
+                <h4>Profesora Pole Dance</h4>
+              </label>
+
+              <label class="show-avatar-checkbox">
+                <input type="checkbox" name="extra" value="Enanos disfrazados 🎩">
+                <div class="show-avatar-circle">🎩</div>
+                <h4>Enanos disfrazados</h4>
+              </label>
+              
+            </div>
+          </div>
+
+          <!-- PASO 4: RECORRIDO -->
+          <div class="stepper-step" id="step-4">
+            <p class="step-description">Definí el trayecto de tu Partybus.</p>
+            <div class="horizontal-inputs-grid">
+              <div class="input-group">
+                <label for="origen">📍 Lugar de Origen</label>
+                <input type="text" id="origen" placeholder="Ej: Palermo, CABA">
+              </div>
+              <div class="input-group">
+                <label for="destino">🏁 Lugar de Destino</label>
+                <input type="text" id="destino" placeholder="Ej: Puerto Madero, CABA">
+              </div>
+            </div>
+            
+            <p class="step-description mt-4">¿Te gustaría incluir paradas icónicas para fotos?</p>
+            <div class="checkbox-grid">
+              <label class="custom-checkbox">
+                <input type="checkbox" name="parada" value="Obelisco">
+                <span class="checkmark"></span> Obelisco
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" name="parada" value="Planetario">
+                <span class="checkmark"></span> Planetario
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" name="parada" value="Floralis Genérica">
+                <span class="checkmark"></span> Floralis Genérica
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" name="parada" value="Puerto Madero">
+                <span class="checkmark"></span> Puerto Madero
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" name="parada" value="Cancha de River">
+                <span class="checkmark"></span> Cancha de River
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" name="parada" value="Cancha de Boca">
+                <span class="checkmark"></span> Cancha de Boca
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" name="parada" value="Otro">
+                <span class="checkmark"></span> Otro
+              </label>
+            </div>
+          </div>
+
+          <!-- PASO 5: LOGÍSTICA -->
+          <div class="stepper-step" id="step-5">
+            <p class="step-description">Últimos detalles para cotizar.</p>
+            <div class="horizontal-inputs-grid">
+              <div class="input-group">
+                <label for="personas">👥 Cantidad de Personas</label>
+                <input type="number" id="personas" placeholder="Ej: 30" min="1" max="100">
+              </div>
+              <div class="input-group">
+                <label for="fecha">📅 Fecha del Evento</label>
+                <input type="date" id="fecha">
+              </div>
+            </div>
+            <div class="input-group mt-4">
+              <label for="duracion">⏱️ Duración aproximada del PartyBus</label>
+              <select id="duracion" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 0.9rem 1rem; border-radius: 10px; outline: none; font-size: 1rem; cursor: pointer;">
+                <option value="45 minutos">45 minutos</option>
+                <option value="1 hora">1 hora</option>
+                <option value="1 hora y media">1 hora y media</option>
+                <option value="2 horas">2 horas</option>
+                <option value="Más de 2 horas">Más de 2 horas</option>
+              </select>
+            </div>
+          </div>
+        <div class="stepper-footer">
+          <button id="btn-prev-step" class="btn-prev" onclick="prevStep()" disabled>Anterior</button>
+          <button id="btn-next-step" class="btn-next" onclick="nextStep()">Siguiente</button>
+        </div>
       </div>
+      
     </div>
   </section>
 
@@ -466,11 +959,12 @@
   </a>
 
   <script src="js/main.js" defer></script>
+  <script src="js/stepper.js" defer></script>
 
   <!-- Universal Lightbox HTML -->
-  <div id="universal-lightbox" onclick="this.style.display='none'">
+  <div id="universal-lightbox" tabindex="-1" aria-modal="true" role="dialog">
     <span class="close-lightbox">&times;</span>
-    <img loading="lazy" id="lightbox-img" src="" alt="Fullscreen">
+    <div id="lightbox-content"></div>
   </div>
 
   <!-- Custom Cursor HTML -->
