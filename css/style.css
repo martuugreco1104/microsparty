@@ -873,8 +873,8 @@
       
       /* Mobile Hero Refactor */
       .hero {
-        align-items: flex-start;
-        padding-top: 100px; /* Espacio / Aire */
+        align-items: center;
+        padding-top: 80px; /* Dejar que flexbox lo centre verticalmente de forma natural */
       }
       .hero::after {
         background: rgba(13, 19, 40, 0.75) !important; /* Oscurecido base */
