@@ -146,6 +146,9 @@
 }
 .unit-card:hover {
   background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(136, 209, 196, 0.2);
+  border-color: var(--accent);
 }
 .unit-card.selected {
   border-color: var(--accent, #88D1C4);
@@ -488,6 +491,20 @@
 .input-group input:focus, .input-group select:focus {
   border-color: var(--accent, #88D1C4);
   box-shadow: 0 0 10px rgba(136, 209, 196, 0.3);
+}
+
+.input-group input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+.input-group input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
 }
 
 /* Opciones de Dropdown con mejor accesibilidad */

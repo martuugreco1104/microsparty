@@ -50,9 +50,9 @@
       </a>
       <a href="#cotizar" class="btn btn-primary mobile-cta">Cotizar Fecha</a>
       <nav id="main-nav" style="display: flex; align-items: center; gap: 28px;">
-        <a href="#experiencias" style="color: var(--text-muted); text-decoration: none; font-family: var(--font-title); font-size: 0.9rem; transition: color 0.3s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'" onclick="document.getElementById('main-nav').classList.remove('active')">Festejos</a>
-        <a href="#recorrido" style="color: var(--text-muted); text-decoration: none; font-family: var(--font-title); font-size: 0.9rem; transition: color 0.3s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'" onclick="document.getElementById('main-nav').classList.remove('active')">Paradas icónicas</a>
-        <a href="#shows" style="color: var(--text-muted); text-decoration: none; font-family: var(--font-title); font-size: 0.9rem; transition: color 0.3s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'" onclick="document.getElementById('main-nav').classList.remove('active')">Shows</a>
+        <a href="#experiencias" class="nav-link" onclick="document.getElementById('main-nav').classList.remove('active')">Festejos</a>
+        <a href="#recorrido" class="nav-link" onclick="document.getElementById('main-nav').classList.remove('active')">Paradas icónicas</a>
+        <a href="#shows" class="nav-link" onclick="document.getElementById('main-nav').classList.remove('active')">Shows</a>
         <a href="#cotizar" class="btn btn-outline" style="padding: 12px 24px; font-size: 0.9rem;" onclick="document.getElementById('main-nav').classList.remove('active')">Cotizar Fecha</a>
       </nav>
     </div>
@@ -66,8 +66,8 @@
     <div class="hero-flash-effect"></div>
     <div class="container">
       <div class="hero-content">
-        <h1>LA FIESTA SOBRE RUEDAS</h1>
-        <p>Convertí cualquier festejo en una experiencia inolvidable arriba del party bus más divertido de CABA y AMBA. Unidades equipadas con máxima tecnología de sonido e iluminación para todas las edades.</p>
+        <img src="Img/prueba hero 3.png" alt="Micros Party" class="hero-logo">
+        <p class="hero-desc">Convertí cualquier festejo en una experiencia inolvidable arriba del party bus más divertido de CABA y AMBA. Unidades equipadas con máxima tecnología de sonido e iluminación para todas las edades.</p>
         <a href="#cotizar" class="btn btn-primary pulse-btn">Cotizá tu fecha ahora</a>
       </div>
     </div>
@@ -509,11 +509,11 @@
       <h2 class="section-title">Lo que dicen <span>nuestros pasajeros</span></h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
 
-        <div class="glass-card" style="padding: 30px;">
+        <div class="glass-card" style="padding: 30px; display: flex; flex-direction: column; justify-content: space-between; height: 100%; box-sizing: border-box;">
           <div style="display: flex; gap: 4px; margin-bottom: 15px;">
             <span style="color: var(--accent);">★★★★★</span>
           </div>
-          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">"¡Gracias por todo Sol! Se re divirtieron los chicos. Hiciste muy feliz a mi hijo y a sus amigos. Lo pasaron increíble todos, ¡la verdad todos fascinados! ¡Chicos y mamás me mandan mensajes contándome lo felices que fueron! Vos una genia. 🙌🪩"</p>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">"¡Gracias por todo! Se re divirtieron los chicos. Hicieron muy feliz a mi hijo y a sus amigos. Lo pasaron increíble todos, ¡la verdad todos fascinados! ¡Chicos y mamás me mandan mensajes contándome lo felices que fueron! Ustedes unos genios. 🙌🪩"</p>
           <div style="display: flex; align-items: center; gap: 12px;">
             <div style="width: 42px; height: 42px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; color: var(--bg-deep); font-size: 1.2rem; flex-shrink: 0;">📱</div>
             <div>
@@ -523,7 +523,7 @@
           </div>
         </div>
 
-        <div class="glass-card" style="padding: 30px;">
+        <div class="glass-card" style="padding: 30px; display: flex; flex-direction: column; justify-content: space-between; height: 100%; box-sizing: border-box;">
           <div style="display: flex; gap: 4px; margin-bottom: 15px;">
             <span style="color: var(--accent);">★★★★★</span>
           </div>
@@ -537,7 +537,7 @@
           </div>
         </div>
 
-        <div class="glass-card" style="padding: 30px;">
+        <div class="glass-card" style="padding: 30px; display: flex; flex-direction: column; justify-content: space-between; height: 100%; box-sizing: border-box;">
           <div style="display: flex; gap: 4px; margin-bottom: 15px;">
             <span style="color: var(--accent);">★★★★★</span>
           </div>
@@ -948,23 +948,29 @@
     <div id="lightbox-content"></div>
   </div>
 
-  <!-- Custom Cursor HTML -->
-  <div id="custom-cursor"></div>
-  <div id="custom-cursor-glow"></div>
-
   <script>
-    // JS for Custom Cursor
+    // Hero Glassmorphism Mask Effect
+    const heroSection = document.querySelector('.hero');
+    if (heroSection) {
+      document.addEventListener('mousemove', (e) => {
+        const rect = heroSection.getBoundingClientRect();
+        if (e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom) {
+          heroSection.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+          heroSection.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+        } else {
+          heroSection.style.setProperty('--mouse-x', `-1000px`);
+          heroSection.style.setProperty('--mouse-y', `-1000px`);
+        }
+      });
+    }
+
+    // JS for Bubble Trail
     if (window.matchMedia("(pointer: fine)").matches) {
-      const cursor = document.getElementById('custom-cursor');
-      const cursorGlow = document.getElementById('custom-cursor-glow');
-      
       let mouseX = 0, mouseY = 0;
-      let glowX = 0, glowY = 0;
       
       document.addEventListener('mousemove', (e) => {
         mouseX = e.clientX;
         mouseY = e.clientY;
-        cursor.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
         
         // Bubble trail logic
         if (Math.random() > 0.6) {
@@ -990,19 +996,6 @@
         }
       });
       
-      function animateCursor() {
-        glowX += (mouseX - glowX) * 0.2;
-        glowY += (mouseY - glowY) * 0.2;
-        cursorGlow.style.transform = `translate(${glowX}px, ${glowY}px)`;
-        requestAnimationFrame(animateCursor);
-      }
-      animateCursor();
-
-      const interactiveElements = document.querySelectorAll('a, button, .exp-card, .show-avatar, .mobile-menu-toggle, .img-wrapper img, .marquee-track img');
-      interactiveElements.forEach(el => {
-        el.addEventListener('mouseenter', () => document.body.classList.add('hovering-link'));
-        el.addEventListener('mouseleave', () => document.body.classList.remove('hovering-link'));
-      });
     }
   </script>
 </body>
