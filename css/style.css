@@ -279,7 +279,7 @@
       width: 100%;
       height: 65vh; 
       object-fit: contain;
-      margin: 0 auto -5vh auto;
+      margin: 0 auto -12vh auto;
       display: block;
       opacity: 0.95;
       pointer-events: none;
@@ -866,7 +866,7 @@
       .form-grid, .exp-info-grid { grid-template-columns: 1fr; }
       .contact-links { flex-direction: column; gap: 15px; }
       .exp-details-box { padding: 40px 30px; }
-      .hero-logo { margin-bottom: -5vh; height: 50vh; }
+      .hero-logo { margin-bottom: -10vh; height: 50vh; }
       .cotizar-video { display: none; } /* Ocultar foto en mobile */
     }
 
