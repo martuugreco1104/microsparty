@@ -44,13 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
       btnNext.style.background = "#25D366";
       btnNext.style.boxShadow = "0 0 15px rgba(37, 211, 102, 0.4)";
       btnNext.classList.add('pulse-wa');
-      document.querySelector('.stepper-body').classList.add('dimmed');
     } else {
       btnNext.innerText = "Siguiente";
       btnNext.style.background = "var(--accent, #88D1C4)";
       btnNext.style.boxShadow = "0 0 15px rgba(136, 209, 196, 0.4)";
       btnNext.classList.remove('pulse-wa');
-      document.querySelector('.stepper-body').classList.remove('dimmed');
     }
   }
 
@@ -119,14 +117,18 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Pantalla de Clímax UX
     const loader = document.getElementById('climax-loader');
+    document.querySelector('.stepper-body').classList.add('dimmed');
+    
     if(loader) {
       loader.style.display = 'flex';
       setTimeout(() => {
         window.open(linkWhatsApp, '_blank');
         loader.style.display = 'none';
+        document.querySelector('.stepper-body').classList.remove('dimmed');
       }, 1500);
     } else {
       window.open(linkWhatsApp, '_blank');
+      document.querySelector('.stepper-body').classList.remove('dimmed');
     }
   }
 

@@ -60,16 +60,10 @@
 
   <!-- PORTADA DE IMPACTO SPLIT -->
   <section class="hero-split" id="hero">
-    <div class="hero-video-half">
-      <video class="hero-video-bg-split" autoplay loop muted playsinline webkit-playsinline defaultMuted onerror="this.style.display='none'">
+    <div class="hero-video-half" style="background-color: #000;">
+      <video class="hero-video-bg-split" autoplay loop muted playsinline webkit-playsinline preload="auto">
         <source src="Vid/hero.mp4" type="video/mp4">
       </video>
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          const v = document.querySelector('.hero-video-bg-split');
-          if(v) { v.muted = true; v.play().catch(e => console.log('Autoplay error', e)); }
-        });
-      </script>
     </div>
     <div class="hero-content-half">
       <div class="hero-flash-effect"></div>
