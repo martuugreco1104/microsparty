@@ -91,24 +91,24 @@ document.addEventListener('DOMContentLoaded', () => {
     budgetData.fecha = document.getElementById('fecha').value || "No especificada";
     budgetData.duracion = document.getElementById('duracion').value || "No especificada";
 
-    let mensaje = `👋 ¡Hola MicrosParty! Quiero cotizar un evento con ustedes.%0A%0A`;
-    mensaje += `*🚌 UNIDAD:* ${budgetData.unidad || 'Sin definir'}%0A`;
-    mensaje += `*🎉 EVENTO:* ${budgetData.evento || 'Sin definir'}%0A`;
+    let mensaje = `👋 ¡Hola MicrosParty! Quiero cotizar un evento espectacular con ustedes 🥳🚐💨%0A%0A`;
+    mensaje += `*🚌 UNIDAD ELEGIDA:* ${budgetData.unidad || 'Sin definir'}%0A`;
+    mensaje += `*🎉 TIPO DE EVENTO:* ${budgetData.evento || 'Sin definir'}%0A`;
     
     if(budgetData.extras.length > 0) {
-      mensaje += `*✨ EXTRAS:* ${budgetData.extras.join(', ')}%0A`;
+      mensaje += `*✨ SHOWS EXTRAS:* ${budgetData.extras.join(', ')}%0A`;
     }
     
-    mensaje += `*📍 RECORRIDO:* De ${budgetData.origen} hacia ${budgetData.destino}%0A`;
+    mensaje += `*📍 RECORRIDO:* De ${budgetData.origen} hacia ${budgetData.destino} 🗺️%0A`;
     
     if(budgetData.paradas.length > 0) {
       mensaje += `*📸 PARADAS FOTOGRÁFICAS:* ${budgetData.paradas.join(', ')}%0A`;
     }
     
-    mensaje += `*👥 PASAJEROS:* ${budgetData.personas}%0A`;
-    mensaje += `*📅 FECHA:* ${budgetData.fecha}%0A`;
-    mensaje += `*⏱️ DURACIÓN:* ${budgetData.duracion}%0A%0A`;
-    mensaje += `¡Espero su respuesta! 🚀`;
+    mensaje += `*👥 CANTIDAD DE PASAJEROS:* ${budgetData.personas} 🕺💃%0A`;
+    mensaje += `*📅 FECHA DEL EVENTO:* ${budgetData.fecha} 🗓️%0A`;
+    mensaje += `*⏱️ DURACIÓN APROXIMADA:* ${budgetData.duracion} ⏳%0A%0A`;
+    mensaje += `¡Espero su respuesta para reservar mi fecha! 🔥🥂🚀`;
 
     const numeroEmpresa = "5491135580896"; 
     const linkWhatsApp = `https://wa.me/${numeroEmpresa}?text=${mensaje}`;
