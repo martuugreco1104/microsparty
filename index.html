@@ -61,9 +61,15 @@
   <!-- PORTADA DE IMPACTO SPLIT -->
   <section class="hero-split" id="hero">
     <div class="hero-video-half">
-      <video class="hero-video-bg-split" autoplay loop muted playsinline onerror="this.style.display='none'">
+      <video class="hero-video-bg-split" autoplay loop muted playsinline webkit-playsinline defaultMuted onerror="this.style.display='none'">
         <source src="Vid/hero.mp4" type="video/mp4">
       </video>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const v = document.querySelector('.hero-video-bg-split');
+          if(v) { v.muted = true; v.play().catch(e => console.log('Autoplay error', e)); }
+        });
+      </script>
     </div>
     <div class="hero-content-half">
       <div class="hero-flash-effect"></div>
@@ -513,7 +519,7 @@
           </div>
           <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">"¡Gracias por todo! Se re divirtieron los chicos. Hicieron muy feliz a mi hijo y a sus amigos. Lo pasaron increíble todos, ¡la verdad todos fascinados! ¡Chicos y mamás me mandan mensajes contándome lo felices que fueron! Ustedes unos genios. 🙌🪩"</p>
           <div style="display: flex; align-items: center; gap: 12px;">
-            <div style="width: 42px; height: 42px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; color: var(--bg-deep); font-size: 1.2rem; flex-shrink: 0;">📱</div>
+            <div style="width: 42px; height: 42px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: var(--bg-deep); font-family: var(--font-title); font-weight: 700; font-size: 1rem; flex-shrink: 0;">M</div>
             <div>
               <p style="font-family: var(--font-title); font-weight: 600; font-size: 0.95rem;">Monica M.</p>
               <p style="color: var(--text-muted); font-size: 0.82rem;">Cumple Infantil</p>
@@ -527,7 +533,7 @@
           </div>
           <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">"¡Gracias por todo! La pasamos muy muy bien, la rompiste con la animación, una genia. 🔥🚌💨"</p>
           <div style="display: flex; align-items: center; gap: 12px;">
-            <div style="width: 42px; height: 42px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; color: var(--bg-deep); font-size: 1.2rem; flex-shrink: 0;">📱</div>
+            <div style="width: 42px; height: 42px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: var(--bg-deep); font-family: var(--font-title); font-weight: 700; font-size: 1rem; flex-shrink: 0;">C</div>
             <div>
               <p style="font-family: var(--font-title); font-weight: 600; font-size: 0.95rem;">Camila R.</p>
               <p style="color: var(--text-muted); font-size: 0.82rem;">Previa</p>
