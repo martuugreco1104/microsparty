@@ -64,12 +64,15 @@
       ],
       // Shows Extra
       mickey: ["Img/Fotos/Personajes/webp/mickey_resultado.webp", "Img/Fotos/Personajes/webp/messi&mickey_resultado.webp"],
-      sonic: ["Img/Fotos/Personajes/webp/mickey&sonic_resultado.webp"],
+      sonic: ["Img/Fotos/Personajes/sonic_convertir_resultado.webp"],
       drag: ["Img/Fotos/Personajes/webp/drag1_resultado.webp", "Img/Fotos/Personajes/webp/spider&drag_resultado.webp", "Img/Fotos/Personajes/webp/spider&drag2_resultado.webp"],
       spider: ["Img/Fotos/Personajes/webp/spider&drag_resultado.webp", "Img/Fotos/Personajes/webp/spider&drag2_resultado.webp"],
       messi: ["Img/Fotos/Personajes/webp/messi1_resultado.webp", "Img/Fotos/Personajes/webp/messi2_resultado.webp", "Img/Fotos/Personajes/webp/messi3_resultado.webp", "Img/Fotos/Personajes/webp/messi4_resultado.webp", "Img/Fotos/Personajes/webp/messi&mickey_resultado.webp"],
       milei: ["Img/Fotos/Personajes/webp/milei_resultado.webp", "Img/Fotos/Personajes/webp/milei2_resultado.webp", "Img/Fotos/Personajes/webp/mileivideo.MOV"],
-      robot: ["Img/Fotos/Personajes/webp/robot_resultado.webp", "Img/Fotos/Personajes/webp/robot2.mp4"]
+      robot: ["Img/Fotos/Personajes/webp/robot_resultado.webp", "Img/Fotos/Personajes/webp/robot2.mp4"],
+      bizarrap: ["Img/Fotos/Personajes/biza_convertir_resultado.webp"],
+      enanos: ["Img/Fotos/Personajes/enano_convertir_resultado.webp", "Img/Fotos/Personajes/enano2_convertir_resultado.webp"],
+      stripper: []
     };
 
     function openGallery(id) {
