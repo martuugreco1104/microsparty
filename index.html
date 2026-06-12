@@ -58,18 +58,22 @@
     </div>
   </header>
 
-  <!-- PORTADA DE IMPACTO -->
-  <section class="hero">
-    <video class="hero-video-bg" autoplay loop muted playsinline onerror="this.style.display='none'">
-      <source src="Vid/hero.mp4" type="video/mp4">
-    </video>
-    <div class="hero-flash-effect"></div>
-    <div class="container">
-      <div class="hero-content">
-        <img src="Img/prueba hero 3.png" alt="Micros Party" class="hero-logo">
-        <h1 class="hero-title-text">El Party Bus más divertido</h1>
-        <p class="hero-desc">Sonido, iluminación y la mejor tecnología para un festejo inolvidable.</p>
-        <a href="#cotizar" class="btn btn-primary pulse-btn">Cotizá tu fecha</a>
+  <!-- PORTADA DE IMPACTO SPLIT -->
+  <section class="hero-split" id="hero">
+    <div class="hero-video-half">
+      <video class="hero-video-bg-split" autoplay loop muted playsinline onerror="this.style.display='none'">
+        <source src="Vid/hero.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-content-half">
+      <div class="hero-flash-effect"></div>
+      <div class="container" style="position: relative; z-index: 2; width: 100%;">
+        <div class="hero-content">
+          <img src="Img/prueba hero 3.png" alt="Micros Party" class="hero-logo">
+          <h1 class="hero-title-text">El Party Bus más divertido</h1>
+          <p class="hero-desc">Sonido, iluminación y la mejor tecnología para un festejo inolvidable.</p>
+          <a href="#cotizar" class="btn btn-primary pulse-btn">Cotizá tu fecha</a>
+        </div>
       </div>
     </div>
   </section>
@@ -461,7 +465,7 @@
           <div class="show-avatar-checkbox">
             <input type="checkbox" id="show-sonic" value="sonic">
           </div>
-          <img class="avatar-img" src="Img/Fotos/Personajes/webp/mickey&sonic_resultado.webp" alt="Sonic">
+          <img class="avatar-img" src="Img/Fotos/Personajes/sonic_convertir_resultado.webp" alt="Sonic">
           <p>Sonic</p>
         </div>
         <div class="show-avatar" data-gallery="drag" tabindex="0" role="button" aria-label="Ver detalles del show">
@@ -469,8 +473,8 @@
           <h4>Drag Queen</h4>
         </div>
         <div class="show-avatar" data-gallery="spider" tabindex="0" role="button" aria-label="Ver detalles del show">
-          <img loading="lazy" src="Img/Fotos/Personajes/webp/spider&drag_resultado.webp" alt="Show Spiderman" class="avatar-img">
-          <h4>Spiderman</h4>
+          <img loading="lazy" src="Img/Fotos/Personajes/webp/spider&drag_resultado.webp" alt="Show Hombre Araña" class="avatar-img">
+          <h4>Hombre Araña</h4>
         </div>
         <div class="show-avatar" data-gallery="messi" tabindex="0" role="button" aria-label="Ver detalles del show">
           <img loading="lazy" src="Img/Fotos/Personajes/webp/messi1_resultado.webp" alt="Animador Messi" class="avatar-img">
@@ -480,20 +484,16 @@
           <img loading="lazy" src="Img/Fotos/Personajes/webp/milei_resultado.webp" alt="Animador Milei" class="avatar-img">
           <h4>Milei</h4>
         </div>
-        <div class="show-avatar" data-gallery="stripper_mujer" tabindex="0" role="button" aria-label="Ver detalles del show">
-          <div class="show-avatar-circle" style="width: 100px; height: 100px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 3rem; margin: 0 auto 1rem;">💃</div>
-          <h4>Stripper Mujer</h4>
-        </div>
-        <div class="show-avatar" data-gallery="stripper_hombre" tabindex="0" role="button" aria-label="Ver detalles del show">
-          <div class="show-avatar-circle" style="width: 100px; height: 100px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 3rem; margin: 0 auto 1rem;">🕺</div>
-          <h4>Stripper Hombre</h4>
+        <div class="show-avatar" data-gallery="stripper" tabindex="0" role="button" aria-label="Ver detalles del show">
+          <div class="show-avatar-circle" style="width: 160px; height: 160px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 5rem; margin: 0 auto 15px; border: 4px solid var(--accent-border); box-shadow: 0 10px 25px rgba(0,0,0,0.4); transition: all 0.3s ease;">🔥</div>
+          <h4>Stripper</h4>
         </div>
         <div class="show-avatar" data-gallery="bizarrap" tabindex="0" role="button" aria-label="Ver detalles del show">
-          <div class="show-avatar-circle" style="width: 100px; height: 100px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 3rem; margin: 0 auto 1rem;">🧢</div>
+          <img loading="lazy" src="Img/Fotos/Personajes/biza_convertir_resultado.webp" alt="Bizarrap" class="avatar-img">
           <h4>Bizarrap</h4>
         </div>
         <div class="show-avatar" data-gallery="enanos" tabindex="0" role="button" aria-label="Ver detalles del show">
-          <div class="show-avatar-circle" style="width: 100px; height: 100px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 3rem; margin: 0 auto 1rem;">🎩</div>
+          <img loading="lazy" src="Img/Fotos/Personajes/enano_convertir_resultado.webp" alt="Enanos" class="avatar-img">
           <h4>Enanos</h4>
         </div>
         <div class="show-avatar" data-gallery="robot" tabindex="0" role="button" aria-label="Ver detalles del show">
@@ -518,8 +518,8 @@
           <div style="display: flex; align-items: center; gap: 12px;">
             <div style="width: 42px; height: 42px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; color: var(--bg-deep); font-size: 1.2rem; flex-shrink: 0;">📱</div>
             <div>
-              <p style="font-family: var(--font-title); font-weight: 600; font-size: 0.95rem;">Mamá de cumpleañero</p>
-              <p style="color: var(--text-muted); font-size: 0.82rem;">Vía WhatsApp</p>
+              <p style="font-family: var(--font-title); font-weight: 600; font-size: 0.95rem;">Monica M.</p>
+              <p style="color: var(--text-muted); font-size: 0.82rem;">Cumple Infantil</p>
             </div>
           </div>
         </div>
@@ -532,8 +532,8 @@
           <div style="display: flex; align-items: center; gap: 12px;">
             <div style="width: 42px; height: 42px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; color: var(--bg-deep); font-size: 1.2rem; flex-shrink: 0;">📱</div>
             <div>
-              <p style="font-family: var(--font-title); font-weight: 600; font-size: 0.95rem;">Cliente de Evento</p>
-              <p style="color: var(--text-muted); font-size: 0.82rem;">Vía WhatsApp</p>
+              <p style="font-family: var(--font-title); font-weight: 600; font-size: 0.95rem;">Camila R.</p>
+              <p style="color: var(--text-muted); font-size: 0.82rem;">Previa</p>
             </div>
           </div>
         </div>
@@ -542,7 +542,7 @@
           <div style="display: flex; gap: 4px; margin-bottom: 15px;">
             <span style="color: var(--accent);">★★★★★</span>
           </div>
-          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">"Los chicos no paraban de bailar. El show de Spiderman fue la locura, todos fliparon. Vale cada peso, súper recomendado para cumpleaños infantiles."</p>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">"Los chicos no paraban de bailar. El show del hombre araña fue la locura. Vale cada peso, súper recomendado para cumpleaños infantiles."</p>
           <div style="display: flex; align-items: center; gap: 12px;">
             <div style="width: 42px; height: 42px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: var(--bg-deep); font-family: var(--font-title); font-weight: 700; font-size: 1rem; flex-shrink: 0;">R</div>
             <div>
@@ -729,7 +729,7 @@
               <label class="show-avatar-checkbox">
                 <input type="checkbox" name="extra" value="Sonic 🦔">
                 <div class="show-avatar-circle">
-                  <img src="Img/Fotos/Personajes/webp/mickey&sonic_resultado.webp" alt="Sonic">
+                  <img src="Img/Fotos/Personajes/sonic_convertir_resultado.webp" alt="Sonic">
                 </div>
                 <h4>Sonic</h4>
               </label>
@@ -752,7 +752,9 @@
 
               <label class="show-avatar-checkbox">
                 <input type="checkbox" name="extra" value="Bizarrap 🧢">
-                <div class="show-avatar-circle">🧢</div>
+                <div class="show-avatar-circle">
+                  <img src="Img/Fotos/Personajes/biza_convertir_resultado.webp" alt="Bizarrap">
+                </div>
                 <h4>Bizarrap</h4>
               </label>
 
@@ -791,9 +793,33 @@
               </label>
 
               <label class="show-avatar-checkbox">
-                <input type="checkbox" name="extra" value="Enanos disfrazados 🎩">
-                <div class="show-avatar-circle">🎩</div>
-                <h4>Enanos disfrazados</h4>
+                <input type="checkbox" name="extra" value="Enanos 🎩">
+                <div class="show-avatar-circle">
+                  <img src="Img/Fotos/Personajes/enano_convertir_resultado.webp" alt="Enanos">
+                </div>
+                <h4>Enanos</h4>
+              </label>
+
+              <label class="show-avatar-checkbox">
+                <input type="checkbox" name="extra" value="Messi ⚽">
+                <div class="show-avatar-circle">
+                  <img src="Img/Fotos/Personajes/webp/messi1_resultado.webp" alt="Messi">
+                </div>
+                <h4>Messi</h4>
+              </label>
+
+              <label class="show-avatar-checkbox">
+                <input type="checkbox" name="extra" value="Robot LED 🤖">
+                <div class="show-avatar-circle">
+                  <img src="Img/Fotos/Personajes/webp/robot_resultado.webp" alt="Robot LED">
+                </div>
+                <h4>Robot LED</h4>
+              </label>
+
+              <label class="show-avatar-checkbox">
+                <input type="checkbox" name="extra" value="Sin personajes ❌">
+                <div class="show-avatar-circle" style="background: rgba(255,255,255,0.05); font-size: 2rem; color: var(--text-muted); display:flex; align-items:center; justify-content:center;">❌</div>
+                <h4>Ninguno</h4>
               </label>
               
             </div>
@@ -876,8 +902,227 @@
         </div>
       </div>
       
+      <div style="text-align: center; margin: 50px auto 20px; width: 100%;">
+        <a href="#faq" style="color: var(--text-muted); font-size: 1.1rem; text-decoration: underline; transition: color 0.3s; font-family: var(--font-title); letter-spacing: 0.5px; display: inline-block; padding: 10px;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'">¿Tenés dudas? Leé nuestras Preguntas Frecuentes</a>
+      </div>
     </div>
   </section>
+  <!-- NUESTRA HISTORIA PRO -->
+  <section id="historia" class="historia-pro-section">
+    <div class="container">
+      <div class="section-header-pro">
+        <h2 class="section-title">Nuestra <span>Historia</span></h2>
+        <div class="title-underline"></div>
+      </div>
+      
+      <div class="historia-grid-pro">
+        
+        <div class="historia-card-pro glass-card-pro">
+          <div class="historia-icon-pro">🚀</div>
+          <h3>2016: El Comienzo</h3>
+          <p>Micros Party nació en 2016 con un sueño y una sola unidad. Arrancamos apostando a transformar un simple traslado en una experiencia inolvidable. Queríamos que la fiesta empezara al subir al micro.</p>
+        </div>
+
+        <div class="historia-card-pro glass-card-pro">
+          <div class="historia-icon-pro">🛣️</div>
+          <h3>El Camino Recorrido</h3>
+          <p>Fueron años de muchísimo trabajo, de noches largas y kilómetros recorridos. Siempre con el mismo objetivo: mejorar, innovar y dar lo mejor en cada evento.</p>
+        </div>
+
+        <div class="historia-card-pro glass-card-pro">
+          <div class="historia-icon-pro">🚌</div>
+          <h3>Nuestra Pasión Intacta</h3>
+          <p>Hoy somos una empresa con 8 unidades. Detrás de cada festejo, hay un equipo que se esfuerza para que todo salga perfecto. Entendemos que es un recuerdo para siempre.</p>
+        </div>
+
+        <div class="historia-card-pro glass-card-pro">
+          <div class="historia-icon-pro">✨</div>
+          <h3>El Presente y Futuro</h3>
+          <p>Ver familias elegirnos una y otra vez es lo que más orgullo nos da. Gracias a cada persona que fue parte de esta historia. Esto recién empieza.</p>
+        </div>
+
+      </div>
+
+      <div class="historia-footer-pro">
+        <h4>Micros Party — Desde 2016 haciendo la fiesta sobre ruedas</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREGUNTAS FRECUENTES PRO -->
+  <section id="faq" class="faq-pro-section">
+    <div class="container">
+      <div class="section-header-pro">
+        <h2 class="section-title">Preguntas <span>Frecuentes</span></h2>
+        <div class="title-underline"></div>
+        <p class="subtitle-pro">Todo lo que necesitás saber para que tu evento sea perfecto.</p>
+      </div>
+
+      <div class="faq-grid-pro">
+        
+        <details class="glass-card-pro faq-item-pro">
+          <summary>
+            ¿Cuántas personas pueden viajar?
+            <span class="faq-icon-cross"></span>
+          </summary>
+          <div class="faq-content-pro">
+            <p>La capacidad ideal es de hasta 40 pasajeros cómodos, aunque dependiendo del tipo de evento se puede ampliar.</p>
+          </div>
+        </details>
+
+        <details class="glass-card-pro faq-item-pro">
+          <summary>
+            ¿Puedo elegir el recorrido?
+            <span class="faq-icon-cross"></span>
+          </summary>
+          <div class="faq-content-pro">
+            <p>¡Sí! El recorrido se arma según el evento y las necesidades del cliente. Podemos realizar traslados, recorridos recreativos o combinar distintos puntos.</p>
+          </div>
+        </details>
+
+        <details class="glass-card-pro faq-item-pro">
+          <summary>
+            ¿Hacen paradas para fotos?
+            <span class="faq-icon-cross"></span>
+          </summary>
+          <div class="faq-content-pro">
+            <p>Sí 😊 Dependiendo del tiempo contratado y el recorrido, podemos hacer paradas para fotos en lugares icónicos como el Obelisco, el Planetario Galileo Galilei u otros puntos acordados previamente.</p>
+          </div>
+        </details>
+
+        <details class="glass-card-pro faq-item-pro">
+          <summary>
+            ¿Se puede llevar comida o bebida?
+            <span class="faq-icon-cross"></span>
+          </summary>
+          <div class="faq-content-pro">
+            <p>¡Sí! Pueden subir con bebidas, snacks, torta, cotillón y todo lo necesario para festejar.</p>
+          </div>
+        </details>
+
+        <details class="glass-card-pro faq-item-pro">
+          <summary>
+            ¿Se puede poner nuestra música?
+            <span class="faq-icon-cross"></span>
+          </summary>
+          <div class="faq-content-pro">
+            <p>Obvio. La música la eligen ustedes. Pueden enviarnos playlist o decirnos el estilo musical para personalizar al máximo la experiencia.</p>
+          </div>
+        </details>
+
+        <details class="glass-card-pro faq-item-pro">
+          <summary>
+            ¿Para qué edades es?
+            <span class="faq-icon-cross"></span>
+          </summary>
+          <div class="faq-content-pro">
+            <p>Tenemos propuestas para todas las edades: infantiles, adolescentes y adultos. Adaptamos la dinámica, música y animación según el tipo de evento.</p>
+          </div>
+        </details>
+
+        <details class="glass-card-pro faq-item-pro">
+          <summary>
+            ¿Cómo reservo una fecha?
+            <span class="faq-icon-cross"></span>
+          </summary>
+          <div class="faq-content-pro">
+            <p>La fecha queda reservada únicamente con el pago de una seña. Una vez realizada, el evento queda oficialmente confirmado.</p>
+          </div>
+        </details>
+
+        <details class="glass-card-pro faq-item-pro">
+          <summary>
+            ¿Cuándo se paga el saldo?
+            <span class="faq-icon-cross"></span>
+          </summary>
+          <div class="faq-content-pro">
+            <p>El saldo restante se abona el mismo día del evento, antes de iniciar el servicio.</p>
+          </div>
+        </details>
+
+        <details class="glass-card-pro faq-item-pro">
+          <summary>
+            ¿La seña se devuelve?
+            <span class="faq-icon-cross"></span>
+          </summary>
+          <div class="faq-content-pro">
+            <p>La seña no es reintegrable, ya que la fecha queda reservada exclusivamente para ese evento.</p>
+          </div>
+        </details>
+
+        <details class="glass-card-pro faq-item-pro">
+          <summary>
+            ¿Qué pasa si cancelo el evento?
+            <span class="faq-icon-cross"></span>
+          </summary>
+          <div class="faq-content-pro">
+            <p>Las cancelaciones realizadas dentro de las 24 horas previas al servicio deberán abonarse en su totalidad.</p>
+          </div>
+        </details>
+
+        <details class="glass-card-pro faq-item-pro">
+          <summary>
+            ¿Trabajan en CABA y Provincia?
+            <span class="faq-icon-cross"></span>
+          </summary>
+          <div class="faq-content-pro">
+            <p>Sí. Trabajamos en CABA y AMBA. Consultanos por tu zona y armamos el recorrido ideal para tu evento.</p>
+          </div>
+        </details>
+
+        <details class="glass-card-pro faq-item-pro">
+          <summary>
+            ¿Puedo contratar ida y vuelta?
+            <span class="faq-icon-cross"></span>
+          </summary>
+          <div class="faq-content-pro">
+            <p>¡Sí! Se pueden contratar servicios de ida, vuelta o recorridos personalizados.</p>
+          </div>
+        </details>
+
+        <details class="glass-card-pro faq-item-pro">
+          <summary>
+            ¿Cuánto dura el servicio?
+            <span class="faq-icon-cross"></span>
+          </summary>
+          <div class="faq-content-pro">
+            <p>Tenemos distintas opciones de duración según el tipo de evento. Te ayudamos a elegir la mejor opción para tu fiesta.</p>
+          </div>
+        </details>
+
+        <details class="glass-card-pro faq-item-pro">
+          <summary>
+            ¿Es un servicio habilitado y seguro?
+            <span class="faq-icon-cross"></span>
+          </summary>
+          <div class="faq-content-pro">
+            <p>Sí, totalmente. Sabemos que esto es importante, sobre todo para cumpleaños y egresados. Por eso todas nuestras unidades cuentan con:</p>
+            <ul style="margin-left: 20px; margin-top: 10px; color: var(--text-muted);">
+              <li><span style="color:var(--accent);">✓</span> Seguro correspondiente</li>
+              <li><span style="color:var(--accent);">✓</span> Verificación Técnica Vehicular (VTV) al día</li>
+              <li><span style="color:var(--accent);">✓</span> Habilitación del Gobierno de la Ciudad</li>
+              <li><span style="color:var(--accent);">✓</span> Choferes profesionales habilitados</li>
+              <li><span style="color:var(--accent);">✓</span> Toda la documentación necesaria para circular</li>
+            </ul>
+            <p style="margin-top: 15px; font-weight: 500;">Queremos que ustedes solo se preocupen por disfrutar 😊</p>
+          </div>
+        </details>
+
+        <details class="glass-card-pro faq-item-pro" style="grid-column: 1 / -1;">
+          <summary>
+            ¿Qué pasa si el micro tiene un inconveniente mecánico?
+            <span class="faq-icon-cross"></span>
+          </summary>
+          <div class="faq-content-pro">
+            <p>Sabemos que esta es una duda importante. Si bien nuestras unidades reciben mantenimiento constante para minimizar cualquier inconveniente, los imprevistos pueden pasar. Por eso, en Micros Party contamos con unidades de respaldo y un equipo preparado para resolver cualquier situación lo más rápido posible, para que tu evento pueda realizarse de la mejor manera y con la menor complicación posible.</p>
+            <div class="highlight-box-pro">Tu tranquilidad y el éxito del evento son nuestra prioridad.</div>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER Y REDES -->
   <footer>
     <div class="container">
