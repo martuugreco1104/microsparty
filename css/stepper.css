@@ -544,6 +544,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   outline: none;
+  white-space: nowrap;
 }
 .btn-prev {
   background: transparent;
@@ -567,6 +568,16 @@
 .btn-next:hover {
   transform: translateY(-2px);
   box-shadow: 0 0 25px rgba(136, 209, 196, 0.6);
+}
+
+@media (max-width: 500px) {
+  .stepper-footer {
+    padding: 0 1rem;
+  }
+  .stepper-footer button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
 }
 
 /* ==================================
