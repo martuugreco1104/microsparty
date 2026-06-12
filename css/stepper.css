@@ -169,9 +169,16 @@
   background: rgba(5, 11, 31, 0.8);
 }
 .stepper-body .unit-card.selected::before {
-  background: var(--accent, #88D1C4);
-  border-color: var(--accent, #88D1C4);
-  box-shadow: inset 0 0 0 4px #050B1F;
+  content: '✔';
+  background: #25D366;
+  border-color: #25D366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  animation: checkPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  box-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
 }
 
 .unit-gallery {
@@ -560,4 +567,82 @@
 .btn-next:hover {
   transform: translateY(-2px);
   box-shadow: 0 0 25px rgba(136, 209, 196, 0.6);
+}
+
+/* ==================================
+   UX / UI ENHANCEMENTS (AUDIT)
+   ================================== */
+
+@keyframes bounceBus {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-15px) scale(1.05); }
+}
+
+@keyframes pulse-whatsapp {
+  0% { transform: scale(1); box-shadow: 0 0 15px rgba(37, 211, 102, 0.4); }
+  50% { transform: scale(1.05); box-shadow: 0 0 25px rgba(37, 211, 102, 0.8); }
+  100% { transform: scale(1); box-shadow: 0 0 15px rgba(37, 211, 102, 0.4); }
+}
+
+.btn-next.pulse-wa {
+  animation: pulse-whatsapp 2s infinite;
+}
+
+.stepper-body {
+  transition: filter 0.5s ease, opacity 0.5s ease;
+}
+.stepper-body.dimmed {
+  filter: brightness(0.4) blur(2px);
+  pointer-events: none;
+}
+
+/* Micro-interacciones de rebote */
+.unit-card:active, .option-btn:active, .show-avatar-checkbox:active .show-avatar-circle {
+  transform: scale(0.95) !important;
+}
+
+/* Check verde animado (Dopamina) */
+@keyframes checkPop {
+  0% { transform: scale(0) rotate(-45deg); opacity: 0; }
+  70% { transform: scale(1.2) rotate(0deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+.option-btn.selected { position: relative; }
+.option-btn.selected::before {
+  content: '✔';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  animation: checkPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  z-index: 20;
+  box-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
+}
+
+.show-avatar-checkbox input:checked + .show-avatar-circle::after {
+  content: '✔';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  animation: checkPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  z-index: 20;
+  box-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
 }
