@@ -53,6 +53,9 @@
         <a href="#experiencias" class="nav-link" onclick="document.getElementById('main-nav').classList.remove('active')">Festejos</a>
         <a href="#recorrido" class="nav-link" onclick="document.getElementById('main-nav').classList.remove('active')">Paradas icónicas</a>
         <a href="#shows" class="nav-link" onclick="document.getElementById('main-nav').classList.remove('active')">Shows</a>
+        <a href="https://instagram.com/microsparty" target="_blank" rel="noopener" class="nav-link" style="display:flex; align-items:center; color: var(--accent);" aria-label="Instagram">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
         <a href="#cotizar" class="btn btn-outline" style="padding: 12px 24px; font-size: 0.9rem;" onclick="document.getElementById('main-nav').classList.remove('active')">Cotizar Fecha</a>
       </nav>
     </div>
@@ -115,7 +118,7 @@
         <div class="infra-card glass-card">
           <div class="img-wrapper carousel-wrapper" id="car-sonido" data-index="0">
             <button class="car-btn left" onclick="prevSlide('sonido')">&#10094;</button>
-            <img loading="lazy" src="Img/Fotos/Micros/webp/micros10_resultado.webp" alt="Sonido DJ" id="img-sonido">
+            <img loading="lazy" src="Img/Fotos/Unidades/sonido_resultado.webp" alt="Sonido DJ" id="img-sonido">
             <button class="car-btn right" onclick="nextSlide('sonido')">&#10095;</button>
           </div>
           <h3>Sonido & DJ en vivo</h3>
@@ -134,16 +137,47 @@
 
         <div class="infra-card glass-card">
           <div class="img-wrapper carousel-wrapper" id="car-pista" data-index="0">
-            <div id="media-pista" style="width:100%; height:100%;">
-              <video autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover;">
-                <source src="Img/Fotos/karaoke/karaoke1.mp4" type="video/mp4">
-              </video>
-            </div>
+            <img loading="lazy" src="Img/Fotos/Unidades/pista multimedia_resultado.webp" alt="Pista Multimedia" id="img-pista">
           </div>
           <h3>Pista Multimedia</h3>
           <p>Smart TV para karaoke, Just Dance, videos personalizados y caño de baile.</p>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SECCIÓN ANIMACIÓN -->
+  <section id="animacion" style="padding: 60px 0; background: linear-gradient(180deg, rgba(5,11,31,0.5) 0%, rgba(13,25,60,0.8) 100%);">
+    <div class="container">
+      <h2 class="section-title">Animación & <span>Desafíos</span></h2>
+      <div class="infra-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+        <div class="glass-card" style="padding:30px;">
+          <h3 style="margin-bottom: 20px; color: var(--accent); font-family: var(--font-title); font-size: 1.5rem;">Animación</h3>
+          <p style="margin-bottom: 20px; font-size: 1.1rem; line-height: 1.6; color:var(--text-muted);">Contamos con coordinadora/animadora para hacer que la experiencia sea aún más divertida, con juegos, interacción, baile y momentos súper entretenidos. La animación está incluida y es totalmente opcional.</p>
+          <div style="display:flex; gap:10px;">
+            <img src="Img/Fotos/Animacion/animacion 1_resultado.webp" alt="Animación 1" style="width: 50%; border-radius: 10px; object-fit: cover;">
+            <img src="Img/Fotos/Animacion/animacion 2 resultado.webp" alt="Animación 2" style="width: 50%; border-radius: 10px; object-fit: cover;">
+          </div>
+        </div>
+        <div class="glass-card" style="padding:30px;">
+          <h3 style="margin-bottom: 20px; color: var(--accent); font-family: var(--font-title); font-size: 1.5rem;">Prendas</h3>
+          <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:20px;">
+            <li class="prenda-item" onclick="openPrenda('mozo')" style="display:flex; align-items:center; gap:15px; background:rgba(255,255,255,0.05); padding:15px; border-radius:10px;">
+              <div style="flex:1;">Conseguir una foto con un mozo 👆🏻</div>
+              <img src="Img/Fotos/Animacion/mozo2_resultado.webp" alt="Mozo" style="width:60px; height:60px; border-radius:5px; object-fit:cover;">
+            </li>
+            <li class="prenda-item" onclick="openPrenda('parabrisas')" style="display:flex; align-items:center; gap:15px; background:rgba(255,255,255,0.05); padding:15px; border-radius:10px;">
+              <div style="flex:1;">Conseguir limpiar un parabrisas 👆🏻</div>
+              <img src="Img/Fotos/Animacion/parabrisa_resultado.webp" alt="Parabrisas" style="width:60px; height:60px; border-radius:5px; object-fit:cover;">
+            </li>
+            <li class="prenda-item" onclick="openPrenda('pelado')" style="display:flex; align-items:center; gap:15px; background:rgba(255,255,255,0.05); padding:15px; border-radius:10px;">
+              <div style="flex:1;">Conseguir una foto con un pelado 👆🏻</div>
+              <img src="Img/Fotos/Animacion/pelado2_resultado.webp" alt="Pelado" style="width:60px; height:60px; border-radius:5px; object-fit:cover;">
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -909,7 +943,7 @@
       </div>
       
       <div style="text-align: center; margin: 15px auto 10px; width: 100%;">
-        <a href="#faq" style="color: var(--text-muted); font-size: 1.1rem; text-decoration: underline; transition: color 0.3s; font-family: var(--font-title); letter-spacing: 0.5px; display: inline-block; padding: 10px;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'">¿Tenés dudas? Leé nuestras Preguntas Frecuentes</a>
+        <a href="#" onclick="event.preventDefault(); document.getElementById('helpModalWrapper').style.display='block';" style="color: var(--text-muted); font-size: 1.1rem; text-decoration: underline; transition: color 0.3s; font-family: var(--font-title); letter-spacing: 0.5px; display: inline-block; padding: 10px;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'">¿Tenés dudas? Leé nuestras Preguntas Frecuentes</a>
       </div>
     </div>
   </section>
@@ -955,12 +989,174 @@
     </div>
   </section>
 
-  <!-- PREGUNTAS FRECUENTES PRO -->
-  <section id="faq" class="faq-pro-section">
+  <!-- FOOTER Y REDES -->
+  <footer>
     <div class="container">
-      <div class="section-header-pro">
+      <div class="footer-content">
+        <div class="logo">
+          <img src="Img/Logos/Logo Micros Party (1).png" alt="MicrosParty Logo" style="height: 100px; width: auto; object-fit: contain;">
+        </div>
+        <div class="contact-links">
+          <a href="https://instagram.com/microsparty" target="_blank" rel="noopener">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            @microsparty
+          </a>
+          <a href="https://wa.me/5491135580896" target="_blank" rel="noopener">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            11 3558 0896
+          </a>
+          <a href="mailto:Micros.partyok@gmail.com">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            Micros.partyok@gmail.com
+          </a>
+        </div>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2026 MicrosParty. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- MODAL DE GALERÍAS (Fotos, Monumentos, Personajes) -->
+  <div class="modal-overlay" id="gallery-modal">
+    <div class="modal-close" onclick="closeModal('gallery-modal')">&times;</div>
+    <div class="modal-content">
+      <div class="modal-grid" id="gallery-grid"></div>
+    </div>
+  </div>
+
+  <!-- MODAL DE DETALLES DE EXPERIENCIA -->
+  <div class="modal-overlay" id="exp-modal">
+    <div class="modal-close" onclick="closeModal('exp-modal')">&times;</div>
+    <div class="modal-content">
+      <div class="modal-body">
+        <h2 id="exp-title"></h2>
+        <p id="exp-desc"></p>
+        <div class="exp-info-grid" style="margin-bottom: 20px;">
+          <div class="exp-info-block">
+            <h4>Características del Recorrido</h4>
+            <ul id="exp-features"></ul>
+          </div>
+          <div class="exp-info-block">
+            <h4>Extras Sugeridos</h4>
+            <ul id="exp-extras"></ul>
+          </div>
+        </div>
+        <div class="exp-gallery modal-grid" id="exp-gallery" style="margin-top: 20px;"></div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTÓN FLOTANTE AYUDA -->
+  <button id="helpFloatBtn" class="wa-float" aria-label="Ayuda" style="background-color: var(--accent); color: var(--bg-deep); border:none; cursor:pointer; font-family:var(--font-title); font-weight:bold; font-size:1.8rem; display:flex; align-items:center; justify-content:center; width:60px; height:60px; border-radius:50%; box-shadow:0 4px 15px rgba(0,0,0,0.3); z-index:1000;">
+    ?
+  </button>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const helpBtn = document.getElementById("helpFloatBtn");
+      const helpModal = document.getElementById("helpModalWrapper");
+      const closeHelpModal = document.getElementById("closeHelpModal");
+      const closeHelpModalTop = document.getElementById("closeHelpModalTop");
+      
+      if(helpBtn && helpModal) {
+        helpBtn.addEventListener("click", () => {
+          helpModal.style.display = "block";
+        });
+        closeHelpModal.addEventListener("click", () => {
+          helpModal.style.display = "none";
+        });
+        if(closeHelpModalTop) {
+            closeHelpModalTop.addEventListener("click", (e) => {
+              e.preventDefault();
+              helpModal.style.display = "none";
+            });
+        }
+        window.addEventListener("click", (e) => {
+          if (e.target === helpModal) {
+            helpModal.style.display = "none";
+          }
+        });
+      }
+    });
+  </script>
+
+  <script src="js/main.js?v=6" defer></script>
+  <script src="js/stepper.js?v=6" defer></script>
+
+  <!-- Universal Lightbox HTML -->
+  <div id="universal-lightbox" tabindex="-1" aria-modal="true" role="dialog">
+    <span class="close-lightbox">&times;</span>
+    <div id="lightbox-content"></div>
+  </div>
+
+  <script>
+    // Hero Glassmorphism Mask Effect
+    const heroSection = document.querySelector('.hero');
+    if (heroSection) {
+      document.addEventListener('mousemove', (e) => {
+        const rect = heroSection.getBoundingClientRect();
+        if (e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom) {
+          heroSection.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+          heroSection.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+        } else {
+          heroSection.style.setProperty('--mouse-x', `-1000px`);
+          heroSection.style.setProperty('--mouse-y', `-1000px`);
+        }
+      });
+    }
+
+    // JS for Bubble Trail
+    if (window.matchMedia("(pointer: fine)").matches) {
+      let mouseX = 0, mouseY = 0;
+      
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        
+        // Bubble trail logic
+        if (Math.random() > 0.6) {
+          const bubble = document.createElement('div');
+          bubble.className = 'cursor-bubble';
+          document.body.appendChild(bubble);
+          
+          const size = Math.random() * 8 + 4;
+          const offsetX = (Math.random() - 0.5) * 20;
+          const offsetY = (Math.random() - 0.5) * 20;
+          
+          bubble.style.width = `${size}px`;
+          bubble.style.height = `${size}px`;
+          bubble.style.left = `${mouseX + offsetX}px`;
+          bubble.style.top = `${mouseY + offsetY}px`;
+          
+          setTimeout(() => {
+            bubble.style.transform = `translateY(-${Math.random() * 40 + 20}px) scale(0)`;
+            bubble.style.opacity = '0';
+          }, 10);
+          
+          setTimeout(() => bubble.remove(), 800);
+        }
+      });
+      
+    }
+  </script>
+
+  <!-- MODAL DE AYUDA / FAQ -->
+  <div id="helpModalWrapper" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999;">
+    <div id="helpModalInner" style="background:var(--bg-deep); border: 1px solid var(--accent-border); display:flex; flex-direction:column; overflow:hidden;">
+      <div style="background:var(--accent); color:var(--bg-deep); padding: 15px 20px; display:flex; justify-content:space-between; align-items:center; font-family:var(--font-title); font-weight:bold;">
+        <span style="font-size: 1.1rem; display:flex; align-items:center; gap:8px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          Preguntas Frecuentes
+        </span>
+        <button id="closeHelpModal" style="background:none; border:none; color:var(--bg-deep); font-size:1.5rem; cursor:pointer; line-height:1;">&times;</button>
+      </div>
+      <div style="padding: 20px; overflow-y:auto; flex:1;">
+        <!-- PREGUNTAS FRECUENTES PRO -->
+  <div id="faq" class="faq-pro-section">
+    <div class="container" style="padding:0;">
+      <div class="section-header-pro" style="display:none;">
         <h2 class="section-title">Preguntas <span>Frecuentes</span></h2>
         <div class="title-underline"></div>
+      </div>
         <p class="subtitle-pro">Todo lo que necesitás saber para que tu evento sea perfecto.</p>
       </div>
 
@@ -1092,7 +1288,7 @@
             <span class="faq-icon-cross"></span>
           </summary>
           <div class="faq-content-pro">
-            <p>Tenemos distintas opciones de duración según el tipo de evento. Te ayudamos a elegir la mejor opción para tu fiesta.</p>
+            <p>Tenemos distintas opciones según el tipo de evento. Nuestro servicio cuenta con un mínimo de contratación de 45 minutos, y podemos adaptarlo según lo que estés buscando para que la fiesta sea perfecta.</p>
           </div>
         </details>
 
@@ -1127,129 +1323,97 @@
 
       </div>
     </div>
-  </section>
-
-  <!-- FOOTER Y REDES -->
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="logo">
-          <img src="Img/Logos/Logo Micros Party (1).png" alt="MicrosParty Logo" style="height: 100px; width: auto; object-fit: contain;">
-        </div>
-        <div class="contact-links">
-          <a href="https://instagram.com/microsparty" target="_blank" rel="noopener">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            @microsparty
-          </a>
-          <a href="https://wa.me/5491135580896" target="_blank" rel="noopener">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            11 3558 0896
-          </a>
-          <a href="mailto:Micros.partyok@gmail.com">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            Micros.partyok@gmail.com
-          </a>
-        </div>
-      </div>
-      <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2026 MicrosParty. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-
-  <!-- MODAL DE GALERÍAS (Fotos, Monumentos, Personajes) -->
-  <div class="modal-overlay" id="gallery-modal">
-    <div class="modal-close" onclick="closeModal('gallery-modal')">&times;</div>
-    <div class="modal-content">
-      <div class="modal-grid" id="gallery-grid"></div>
-    </div>
   </div>
+</div>
+</div>
+</div>
+  <style>
+    .prenda-item { transition: transform 0.2s, background 0.2s; cursor: pointer; }
+    .prenda-item:hover { transform: translateY(-5px); background: rgba(136, 209, 196, 0.1) !important; }
+    
+    #prendaModalWrapper { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:10000; align-items:center; justify-content:center; backdrop-filter:blur(5px); }
+    .prenda-modal-content { background:var(--bg-deep); padding: 20px; border-radius:15px; max-width:320px; width:90%; position:relative; border: 1px solid var(--accent-border); text-align:center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    
+    /* Responsive styles for Help Modal to be Bottom-Right */
+    #helpModalWrapper { background: none !important; backdrop-filter: none !important; pointer-events: none; }
+    #helpModalInner { pointer-events: auto; position: fixed; bottom: 90px; right: 30px; width: 350px; max-height: 60vh; margin: 0 !important; box-shadow: 0 10px 30px rgba(0,0,0,0.5); backdrop-filter: blur(10px); background: rgba(5, 11, 31, 0.95) !important; border-radius: 15px; }
+    #helpModalInner .faq-grid-pro { grid-template-columns: 1fr !important; gap: 10px !important; }
+    #helpModalInner .glass-card-pro { padding: 15px !important; }
+    
+    @media (max-width: 767px) {
+      #helpModalInner { right: 20px; bottom: 90px; width: calc(100% - 40px); max-height: 60vh; }
+    }
+  </style>
 
-  <!-- MODAL DE DETALLES DE EXPERIENCIA -->
-  <div class="modal-overlay" id="exp-modal">
-    <div class="modal-close" onclick="closeModal('exp-modal')">&times;</div>
-    <div class="modal-content">
-      <div class="modal-body">
-        <h2 id="exp-title"></h2>
-        <p id="exp-desc"></p>
-        <div class="exp-info-grid" style="margin-bottom: 20px;">
-          <div class="exp-info-block">
-            <h4>Características del Recorrido</h4>
-            <ul id="exp-features"></ul>
-          </div>
-          <div class="exp-info-block">
-            <h4>Extras Sugeridos</h4>
-            <ul id="exp-extras"></ul>
-          </div>
-        </div>
-        <div class="exp-gallery modal-grid" id="exp-gallery" style="margin-top: 20px;"></div>
-      </div>
-      </div>
+  <!-- MODAL DE PRENDAS -->
+  <div id="prendaModalWrapper">
+    <div class="prenda-modal-content">
+      <button onclick="closePrenda()" style="position:absolute; top:15px; right:15px; background:none; border:none; color:#fff; font-size:2rem; cursor:pointer;">&times;</button>
+      <h3 id="prendaTitle" style="color: var(--accent); margin-bottom: 10px; font-family: var(--font-title); font-size: 1.2rem; margin-top:5px;"></h3>
+      <p id="prendaDesc" style="color: var(--text-muted); margin-bottom: 15px; font-size: 0.9rem; line-height: 1.5;"></p>
+      <div id="prendaMediaContainer" style="width:100%; border-radius:10px; overflow:hidden;"></div>
     </div>
-  </div>
-
-  <!-- BOTÓN FLOTANTE WHATSAPP -->
-  <a href="https://wa.me/5491135580896" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
-
-  <script src="js/main.js?v=6" defer></script>
-  <script src="js/stepper.js?v=6" defer></script>
-
-  <!-- Universal Lightbox HTML -->
-  <div id="universal-lightbox" tabindex="-1" aria-modal="true" role="dialog">
-    <span class="close-lightbox">&times;</span>
-    <div id="lightbox-content"></div>
   </div>
 
   <script>
-    // Hero Glassmorphism Mask Effect
-    const heroSection = document.querySelector('.hero');
-    if (heroSection) {
-      document.addEventListener('mousemove', (e) => {
-        const rect = heroSection.getBoundingClientRect();
-        if (e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom) {
-          heroSection.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
-          heroSection.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
-        } else {
-          heroSection.style.setProperty('--mouse-x', `-1000px`);
-          heroSection.style.setProperty('--mouse-y', `-1000px`);
-        }
-      });
+    const prendasData = {
+      'mozo': {
+        title: 'Foto con un mozo',
+        desc: 'Tienen que salir a la calle, encontrar a un mozo trabajando y sacarse una foto grupal. ¡El que no lo hace, cumple un castigo!',
+        media: 'Img/Fotos/Animacion/mozo2_resultado.webp'
+      },
+      'parabrisas': {
+        title: 'Limpiar un parabrisas',
+        desc: 'Armados con un limpiaparabrisas y mucha actitud, ¡a limpiar el parabrisas de algún auto que frene en el semáforo! Momentos épicos garantizados.',
+        media: 'Img/Fotos/Animacion/parabrisa_resultado.webp'
+      },
+      'pelado': {
+        title: 'Foto con un pelado',
+        desc: 'Un clásico que nunca falla. Encuentren a un pelado copado y convéncelo para una selfie inolvidable con todo el grupo.',
+        media: 'Img/Fotos/Animacion/pelado2_resultado.webp'
+      }
+    };
+
+    function openPrenda(id) {
+      const data = prendasData[id];
+      if(!data) return;
+      document.getElementById('prendaTitle').innerText = data.title;
+      document.getElementById('prendaDesc').innerText = data.desc;
+      
+      const mediaContainer = document.getElementById('prendaMediaContainer');
+      mediaContainer.innerHTML = '';
+      
+      if (data.media.endsWith('.mp4')) {
+        const video = document.createElement('video');
+        video.src = data.media;
+        video.controls = true;
+        video.autoplay = true;
+        video.style.width = '100%';
+        video.style.display = 'block';
+        mediaContainer.appendChild(video);
+      } else {
+        const img = document.createElement('img');
+        img.src = data.media;
+        img.style.width = '100%';
+        img.style.display = 'block';
+        mediaContainer.appendChild(img);
+      }
+      
+      const wrapper = document.getElementById('prendaModalWrapper');
+      wrapper.style.display = 'flex';
     }
 
-    // JS for Bubble Trail
-    if (window.matchMedia("(pointer: fine)").matches) {
-      let mouseX = 0, mouseY = 0;
-      
-      document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        
-        // Bubble trail logic
-        if (Math.random() > 0.6) {
-          const bubble = document.createElement('div');
-          bubble.className = 'cursor-bubble';
-          document.body.appendChild(bubble);
-          
-          const size = Math.random() * 8 + 4;
-          const offsetX = (Math.random() - 0.5) * 20;
-          const offsetY = (Math.random() - 0.5) * 20;
-          
-          bubble.style.width = `${size}px`;
-          bubble.style.height = `${size}px`;
-          bubble.style.left = `${mouseX + offsetX}px`;
-          bubble.style.top = `${mouseY + offsetY}px`;
-          
-          setTimeout(() => {
-            bubble.style.transform = `translateY(-${Math.random() * 40 + 20}px) scale(0)`;
-            bubble.style.opacity = '0';
-          }, 10);
-          
-          setTimeout(() => bubble.remove(), 800);
-        }
-      });
-      
+    function closePrenda() {
+      document.getElementById('prendaModalWrapper').style.display = 'none';
+      const mediaContainer = document.getElementById('prendaMediaContainer');
+      mediaContainer.innerHTML = ''; // Stop video if playing
     }
+    
+    document.getElementById('prendaModalWrapper').addEventListener('click', function(e) {
+      if(e.target === this) closePrenda();
+    });
   </script>
+
 </body>
 </html>
 
