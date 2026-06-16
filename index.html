@@ -158,7 +158,7 @@
       
       <div class="buses-grid" id="busesGrid">
         <!-- Unidad Black -->
-        <div class="bus-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
+        <div class="bus-card">
           <div class="unit-gallery">
             <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
             <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
@@ -169,7 +169,8 @@
           <div class="unit-info">
             <h3>UNIDAD BLACK ⚡️</h3>
             <div class="unit-differential">Estilo clubber y minimalista</div>
-            <div class="unit-features-wrapper">
+            <button class="btn-expand" onclick="toggleDetails(event, this)" style="padding: 10px 15px; font-size: 1.1rem; border-radius: 8px; margin-bottom: 10px;">Ver qué tiene ↓</button>
+              <div class="unit-features-wrapper">
               <ul class="unit-features">
                 <li>DJ en vivo y Pista de baile</li>
                 <li>Caño de Pole Dance</li>
@@ -182,7 +183,7 @@
         </div>
 
         <!-- Unidad Gold -->
-        <div class="bus-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
+        <div class="bus-card">
           <div class="unit-gallery">
             <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
             <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
@@ -193,7 +194,8 @@
           <div class="unit-info">
             <h3>UNIDAD GOLD ⚡️</h3>
             <div class="unit-differential">Experiencia premium completa</div>
-            <div class="unit-features-wrapper">
+            <button class="btn-expand" onclick="toggleDetails(event, this)" style="padding: 10px 15px; font-size: 1.1rem; border-radius: 8px; margin-bottom: 10px;">Ver qué tiene ↓</button>
+              <div class="unit-features-wrapper">
               <ul class="unit-features">
                 <li>DJ en vivo y Pista de baile</li>
                 <li>Máquina de humo y Caño de Pole Dance</li>
@@ -208,7 +210,7 @@
         </div>
 
         <!-- Unidad Red II -->
-        <div class="bus-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
+        <div class="bus-card">
           <div class="unit-gallery">
             <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
             <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
@@ -219,7 +221,8 @@
           <div class="unit-info">
             <h3>UNIDAD RED II ⚡️</h3>
             <div class="unit-differential">Energía y estilo urbano</div>
-            <div class="unit-features-wrapper">
+            <button class="btn-expand" onclick="toggleDetails(event, this)" style="padding: 10px 15px; font-size: 1.1rem; border-radius: 8px; margin-bottom: 10px;">Ver qué tiene ↓</button>
+              <div class="unit-features-wrapper">
               <ul class="unit-features">
                 <li>DJ en vivo y Pista de baile</li>
                 <li>Máquina de humo y Caño de Pole Dance</li>
@@ -234,7 +237,7 @@
         </div>
 
         <!-- Unidad White -->
-        <div class="bus-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
+        <div class="bus-card">
           <div class="unit-gallery">
             <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
             <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
@@ -245,7 +248,8 @@
           <div class="unit-info">
             <h3>UNIDAD WHITE ⚡️</h3>
             <div class="unit-differential">Estética limpia y elegante</div>
-            <div class="unit-features-wrapper">
+            <button class="btn-expand" onclick="toggleDetails(event, this)" style="padding: 10px 15px; font-size: 1.1rem; border-radius: 8px; margin-bottom: 10px;">Ver qué tiene ↓</button>
+              <div class="unit-features-wrapper">
               <ul class="unit-features">
                 <li>DJ en vivo y Pista de baile</li>
                 <li>Máquina de humo y Caño de Pole Dance</li>
@@ -260,7 +264,7 @@
         </div>
 
         <!-- Unidad Brown UV -->
-        <div class="bus-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
+        <div class="bus-card">
           <div class="unit-gallery">
             <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
             <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
@@ -271,7 +275,8 @@
           <div class="unit-info">
             <h3>UNIDAD BROWN UV ⚡️</h3>
             <div class="unit-differential">Pintura flúor y luces neón</div>
-            <div class="unit-features-wrapper">
+            <button class="btn-expand" onclick="toggleDetails(event, this)" style="padding: 10px 15px; font-size: 1.1rem; border-radius: 8px; margin-bottom: 10px;">Ver qué tiene ↓</button>
+              <div class="unit-features-wrapper">
               <ul class="unit-features">
                 <li>Ambientación Flúor reactiva a UV</li>
                 <li>DJ en vivo y Pista de baile</li>
