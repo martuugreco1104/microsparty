@@ -474,9 +474,9 @@
           <div style="position: absolute; top: 10px; background: rgba(0,0,0,0.6); color: var(--accent); padding: 5px 15px; border-radius: 20px; font-family: var(--font-title); font-size: 1.2rem; font-weight: bold; z-index: 10;">
             ${currentImg.title}
           </div>
-          <button onclick="window.navBusesLightbox(-1, event)" style="position:absolute; left:20px; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.5); border:none; color:#fff; font-size:2rem; width:50px; height:50px; border-radius:50%; cursor:pointer; z-index:10;">&#10094;</button>
+          <button onclick="window.navBusesLightbox(-1, event)" style="position:absolute; left:40px; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.6); border:none; color:#fff; font-size:2rem; width:60px; height:60px; border-radius:50%; cursor:pointer; z-index:9999; pointer-events:auto;">&#10094;</button>
           <img src="${currentImg.src}" alt="${currentImg.title}" style="max-width: 90vw; max-height: 85vh; object-fit: contain; border-radius: 8px; transition: opacity 0.3s;">
-          <button onclick="window.navBusesLightbox(1, event)" style="position:absolute; right:20px; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.5); border:none; color:#fff; font-size:2rem; width:50px; height:50px; border-radius:50%; cursor:pointer; z-index:10;">&#10095;</button>
+          <button onclick="window.navBusesLightbox(1, event)" style="position:absolute; right:40px; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.6); border:none; color:#fff; font-size:2rem; width:60px; height:60px; border-radius:50%; cursor:pointer; z-index:9999; pointer-events:auto;">&#10095;</button>
         </div>
       `;
       lightbox.style.display = 'flex';
