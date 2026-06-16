@@ -49,7 +49,7 @@
         <img src="Img/Logos/Logo Micros Party (1).png" alt="MicrosParty Logo" fetchpriority="high" style="height: 60px; width: auto; object-fit: contain;">
       </a>
       <a href="#cotizar" class="btn btn-primary mobile-cta">Cotizar Fecha</a>
-      <nav id="main-nav" style="display: flex; align-items: center; gap: 28px;">
+      <nav id="main-nav" class="nav-desktop">
         <a href="#buses" class="nav-link" onclick="document.getElementById('main-nav').classList.remove('active')">Unidades</a>
         <a href="#experiencias" class="nav-link" onclick="document.getElementById('main-nav').classList.remove('active')">Festejos</a>
         <a href="#recorrido" class="nav-link" onclick="document.getElementById('main-nav').classList.remove('active')">Paradas icónicas</a>
@@ -159,7 +159,7 @@
       
       <div class="buses-grid" id="busesGrid">
         <!-- Unidad Black -->
-        <div class="unit-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
+        <div class="bus-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
           <div class="unit-gallery">
             <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
             <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
@@ -183,7 +183,7 @@
         </div>
 
         <!-- Unidad Gold -->
-        <div class="unit-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
+        <div class="bus-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
           <div class="unit-gallery">
             <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
             <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
@@ -209,7 +209,7 @@
         </div>
 
         <!-- Unidad Red II -->
-        <div class="unit-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
+        <div class="bus-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
           <div class="unit-gallery">
             <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
             <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
@@ -235,7 +235,7 @@
         </div>
 
         <!-- Unidad White -->
-        <div class="unit-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
+        <div class="bus-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
           <div class="unit-gallery">
             <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
             <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
@@ -261,7 +261,7 @@
         </div>
 
         <!-- Unidad Brown UV -->
-        <div class="unit-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
+        <div class="bus-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
           <div class="unit-gallery">
             <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
             <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
@@ -488,7 +488,7 @@
           <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:15px; flex: 1;">
             <li class="prenda-item" onclick="this.classList.toggle('active')" style="background:rgba(255,255,255,0.05); padding:15px; border-radius:10px; cursor: pointer; transition: all 0.3s ease;">
               <div style="display:flex; justify-content:space-between; align-items:center; font-weight: bold; font-size: 1.1rem;">
-                <span>Conseguir una foto con un mozo 👆🏻</span>
+                <span>Conseguir una foto con un mozo </span>
                 <span class="prenda-arrow" style="transition: transform 0.3s;">&#9662;</span>
               </div>
               <div class="prenda-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; text-align: center;">
@@ -497,7 +497,7 @@
             </li>
             <li class="prenda-item" onclick="this.classList.toggle('active')" style="background:rgba(255,255,255,0.05); padding:15px; border-radius:10px; cursor: pointer; transition: all 0.3s ease;">
               <div style="display:flex; justify-content:space-between; align-items:center; font-weight: bold; font-size: 1.1rem;">
-                <span>Conseguir limpiar un parabrisas 👆🏻</span>
+                <span>Conseguir limpiar un parabrisas </span>
                 <span class="prenda-arrow" style="transition: transform 0.3s;">&#9662;</span>
               </div>
               <div class="prenda-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; text-align: center;">
@@ -506,7 +506,7 @@
             </li>
             <li class="prenda-item" onclick="this.classList.toggle('active')" style="background:rgba(255,255,255,0.05); padding:15px; border-radius:10px; cursor: pointer; transition: all 0.3s ease;">
               <div style="display:flex; justify-content:space-between; align-items:center; font-weight: bold; font-size: 1.1rem;">
-                <span>Conseguir una foto con un pelado 👆🏻</span>
+                <span>Conseguir una foto con un pelado </span>
                 <span class="prenda-arrow" style="transition: transform 0.3s;">&#9662;</span>
               </div>
               <div class="prenda-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; text-align: center;">
@@ -660,7 +660,7 @@
             <p class="step-description">Selecciona el Partybus ideal para tu noche. (Deslizá para ver más)</p>
             <div class="unit-scroll-container">
               <!-- Unidad Black -->
-              <div class="unit-card" data-value="Unidad Black" onclick="selectCard(this, 'unidad')">
+              <div class="bus-card" data-value="Unidad Black" onclick="selectCard(this, 'unidad')">
                 <div class="unit-gallery">
                   <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
                   <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
@@ -685,7 +685,7 @@
               </div>
 
               <!-- Unidad Gold -->
-              <div class="unit-card" data-value="Unidad Gold" onclick="selectCard(this, 'unidad')">
+              <div class="bus-card" data-value="Unidad Gold" onclick="selectCard(this, 'unidad')">
                 <div class="unit-gallery">
                   <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
                   <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
@@ -712,7 +712,7 @@
               </div>
 
               <!-- Unidad Red II -->
-              <div class="unit-card" data-value="Unidad Red II" onclick="selectCard(this, 'unidad')">
+              <div class="bus-card" data-value="Unidad Red II" onclick="selectCard(this, 'unidad')">
                 <div class="unit-gallery">
                   <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
                   <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
@@ -739,7 +739,7 @@
               </div>
 
               <!-- Unidad White -->
-              <div class="unit-card" data-value="Unidad White" onclick="selectCard(this, 'unidad')">
+              <div class="bus-card" data-value="Unidad White" onclick="selectCard(this, 'unidad')">
                 <div class="unit-gallery">
                   <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
                   <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
@@ -766,7 +766,7 @@
               </div>
 
               <!-- Unidad Brown UV -->
-              <div class="unit-card" data-value="Unidad Brown UV" onclick="selectCard(this, 'unidad')">
+              <div class="bus-card" data-value="Unidad Brown UV" onclick="selectCard(this, 'unidad')">
                 <div class="unit-gallery">
                   <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
                   <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>

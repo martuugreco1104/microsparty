@@ -868,8 +868,8 @@
     @media (max-width: 768px) {
       .header-content .logo { display: none; } /* Ocultar logo para dejar Hamburguesa | Botón */
       .mobile-menu-toggle { display: block; }
-      #main-nav { display: none !important; position: absolute; top: 100%; left: 0; width: 100%; background: rgba(5, 11, 31, 0.98); backdrop-filter: blur(10px); flex-direction: column !important; align-items: center; padding: 40px 0; gap: 25px; border-bottom: 1px solid rgba(136, 209, 196, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-      #main-nav.active { display: flex !important; }
+      
+      
       
       /* Mobile Hero Refactor */
       .hero {

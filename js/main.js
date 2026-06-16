@@ -376,7 +376,7 @@
 
     document.addEventListener('click', function(e) {
       // Cerrar Lightbox si se hace clic en él (y no en el contenido directamente)
-      if (e.target.id === 'universal-lightbox' || e.target.classList.contains('close-lightbox')) {
+      if (e.target.id === 'universal-lightbox' || e.target.closest(".close-lightbox")) {
         return closeUniversalLightbox();
       }
 
@@ -414,7 +414,7 @@
       }
 
       // Interceptar clics en imágenes de Nuestros Buses para abrir carrusel global
-      if (e.target.tagName === 'IMG' && e.target.closest('#buses') && e.target.closest('.unit-card')) {
+      if (e.target.tagName === 'IMG' && e.target.closest('#buses') && e.target.closest('.bus-card')) {
         e.stopPropagation();
         e.preventDefault();
         openBusesLightbox(e.target);
@@ -446,7 +446,7 @@
     function openBusesLightbox(clickedImg) {
       // Recolectar todas las imágenes y sus títulos de la sección de buses
       currentBusesImages = [];
-      const busCards = document.querySelectorAll('#buses .unit-card');
+      const busCards = document.querySelectorAll('#buses .bus-card');
       busCards.forEach(card => {
         const title = card.querySelector('h3') ? card.querySelector('h3').innerText : '';
         const imgs = card.querySelectorAll('.unit-gallery img');
