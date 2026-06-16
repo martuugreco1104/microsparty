@@ -1053,3 +1053,41 @@
 .faq-content-pro { padding-top: 15px; color: var(--text-muted); line-height: 1.7; font-size: 1rem; animation: slideDown 0.3s ease-out; }
 @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
 .highlight-box-pro { margin-top: 15px; padding: 15px; background: rgba(136, 209, 196, 0.1); border-left: 4px solid var(--accent); color: #fff; font-weight: 500; border-radius: 4px; }
+
+/* REFINAMIENTOS FINALES UX/UI */
+.btn-expand {
+  display: inline-block;
+  background: rgba(136, 209, 196, 0.15);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  font-family: var(--font-text);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 100%;
+  text-align: center;
+}
+.btn-expand:hover {
+  background: var(--accent);
+  color: var(--bg-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+.prenda-item {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+.prenda-item:hover {
+  background: rgba(255,255,255,0.1) !important;
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 4px 15px rgba(136, 209, 196, 0.1);
+}

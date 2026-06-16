@@ -397,11 +397,32 @@
         return;
       }
 
+      // Cerrar modales si se hace clic en el overlay (fondo oscuro)
+      if (e.target.classList.contains('modal-overlay') || e.target.id === 'prendaModalWrapper' || e.target.id === 'helpModalWrapper') {
+        if (e.target.classList.contains('modal-overlay')) closeModal(e.target.id);
+        if (e.target.id === 'prendaModalWrapper') {
+           e.target.style.display = 'none';
+           const mc = document.getElementById('prendaMediaContainer');
+           if (mc) mc.innerHTML = '';
+        }
+        if (e.target.id === 'helpModalWrapper') e.target.style.display = 'none';
+      }
+
+      // Interceptar clics en imágenes de Nuestros Buses para abrir carrusel global
+      if (e.target.tagName === 'IMG' && e.target.closest('#buses') && e.target.closest('.unit-card')) {
+        e.stopPropagation();
+        e.preventDefault();
+        openBusesLightbox(e.target);
+        return;
+      }
+
       // Interceptar clics en imágenes para abrirlas en pantalla grande
       if (e.target.tagName === 'IMG' && 
           !e.target.closest('a.logo') && 
           !e.target.closest('.show-avatar') &&
-          !e.target.closest('.show-avatar-checkbox')) {
+          !e.target.closest('.show-avatar-checkbox') &&
+          !e.target.closest('.hero-split') &&
+          !e.target.closest('#step-1')) {
         e.stopPropagation();
         e.preventDefault();
         const lightbox = document.getElementById('universal-lightbox');
@@ -412,6 +433,57 @@
         lightbox.style.display = 'flex';
       }
     });
+
+    // --- LÓGICA DEL LIGHTBOX PARA BUSES ---
+    let currentBusesImages = [];
+    let currentBusesIndex = 0;
+
+    function openBusesLightbox(clickedImg) {
+      // Recolectar todas las imágenes y sus títulos de la sección de buses
+      currentBusesImages = [];
+      const busCards = document.querySelectorAll('#buses .unit-card');
+      busCards.forEach(card => {
+        const title = card.querySelector('h3') ? card.querySelector('h3').innerText : '';
+        const imgs = card.querySelectorAll('.unit-gallery img');
+        imgs.forEach(img => {
+          currentBusesImages.push({ src: img.src, title: title });
+        });
+      });
+
+      // Encontrar el índice de la imagen clickeada
+      currentBusesIndex = currentBusesImages.findIndex(obj => obj.src === clickedImg.src);
+      if (currentBusesIndex === -1) currentBusesIndex = 0;
+
+      updateBusesLightbox();
+    }
+
+    function updateBusesLightbox() {
+      const lightbox = document.getElementById('universal-lightbox');
+      const content = document.getElementById('lightbox-content');
+      if (!lightbox || !content) return;
+
+      const currentImg = currentBusesImages[currentBusesIndex];
+
+      content.innerHTML = `
+        <div style="position:relative; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+          <div style="position: absolute; top: 10px; background: rgba(0,0,0,0.6); color: var(--accent); padding: 5px 15px; border-radius: 20px; font-family: var(--font-title); font-size: 1.2rem; font-weight: bold; z-index: 10;">
+            ${currentImg.title}
+          </div>
+          <button onclick="window.navBusesLightbox(-1, event)" style="position:absolute; left:20px; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.5); border:none; color:#fff; font-size:2rem; width:50px; height:50px; border-radius:50%; cursor:pointer; z-index:10;">&#10094;</button>
+          <img src="${currentImg.src}" alt="${currentImg.title}" style="max-width: 90vw; max-height: 85vh; object-fit: contain; border-radius: 8px; transition: opacity 0.3s;">
+          <button onclick="window.navBusesLightbox(1, event)" style="position:absolute; right:20px; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.5); border:none; color:#fff; font-size:2rem; width:50px; height:50px; border-radius:50%; cursor:pointer; z-index:10;">&#10095;</button>
+        </div>
+      `;
+      lightbox.style.display = 'flex';
+    }
+
+    window.navBusesLightbox = function(direction, e) {
+      if (e) { e.stopPropagation(); e.preventDefault(); }
+      currentBusesIndex += direction;
+      if (currentBusesIndex < 0) currentBusesIndex = currentBusesImages.length - 1;
+      if (currentBusesIndex >= currentBusesImages.length) currentBusesIndex = 0;
+      updateBusesLightbox();
+    };
 
     // Accesibilidad por teclado
     document.addEventListener('keydown', function(e) {

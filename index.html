@@ -148,39 +148,6 @@
   </section>
 
 
-  <!-- SECCIÓN ANIMACIÓN -->
-  <section id="animacion" style="padding: 60px 0; background: linear-gradient(180deg, rgba(5,11,31,0.5) 0%, rgba(13,25,60,0.8) 100%);">
-    <div class="container">
-      <h2 class="section-title">Animación & <span>Desafíos</span></h2>
-      <div class="infra-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-        <div class="glass-card" style="padding:30px;">
-          <h3 style="margin-bottom: 20px; color: var(--accent); font-family: var(--font-title); font-size: 1.5rem;">Animación</h3>
-          <p style="margin-bottom: 20px; font-size: 1.1rem; line-height: 1.6; color:var(--text-muted);">Contamos con coordinadora/animadora para hacer que la experiencia sea aún más divertida, con juegos, interacción, baile y momentos súper entretenidos. La animación está incluida y es totalmente opcional.</p>
-          <div style="display:flex; gap:10px;">
-            <img src="Img/Fotos/Animacion/animacion 1_resultado.webp" alt="Animación 1" style="width: 50%; border-radius: 10px; object-fit: cover;">
-            <img src="Img/Fotos/Animacion/animacion 2 resultado.webp" alt="Animación 2" style="width: 50%; border-radius: 10px; object-fit: cover;">
-          </div>
-        </div>
-        <div class="glass-card" style="padding:30px;">
-          <h3 style="margin-bottom: 20px; color: var(--accent); font-family: var(--font-title); font-size: 1.5rem;">Prendas</h3>
-          <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:20px;">
-            <li class="prenda-item" onclick="openPrenda('mozo')" style="display:flex; align-items:center; gap:15px; background:rgba(255,255,255,0.05); padding:15px; border-radius:10px;">
-              <div style="flex:1;">Conseguir una foto con un mozo 👆🏻</div>
-              <img src="Img/Fotos/Animacion/mozo2_resultado.webp" alt="Mozo" style="width:60px; height:60px; border-radius:5px; object-fit:cover;">
-            </li>
-            <li class="prenda-item" onclick="openPrenda('parabrisas')" style="display:flex; align-items:center; gap:15px; background:rgba(255,255,255,0.05); padding:15px; border-radius:10px;">
-              <div style="flex:1;">Conseguir limpiar un parabrisas 👆🏻</div>
-              <img src="Img/Fotos/Animacion/parabrisa_resultado.webp" alt="Parabrisas" style="width:60px; height:60px; border-radius:5px; object-fit:cover;">
-            </li>
-            <li class="prenda-item" onclick="openPrenda('pelado')" style="display:flex; align-items:center; gap:15px; background:rgba(255,255,255,0.05); padding:15px; border-radius:10px;">
-              <div style="flex:1;">Conseguir una foto con un pelado 👆🏻</div>
-              <img src="Img/Fotos/Animacion/pelado2_resultado.webp" alt="Pelado" style="width:60px; height:60px; border-radius:5px; object-fit:cover;">
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- SECCIÓN NUESTROS BUSES -->
   <section id="buses">
@@ -189,30 +156,6 @@
       <button class="buses-nav prev" onclick="scrollBuses(-1)" style="position: absolute; left: 0; top: 55%; transform: translateY(-50%); background: rgba(136, 209, 196, 0.2); color: var(--accent); border: 1px solid var(--accent); width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 10; font-size: 1.2rem; display: flex; align-items: center; justify-content: center;">&#10094;</button>
       <button class="buses-nav next" onclick="scrollBuses(1)" style="position: absolute; right: 0; top: 55%; transform: translateY(-50%); background: rgba(136, 209, 196, 0.2); color: var(--accent); border: 1px solid var(--accent); width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 10; font-size: 1.2rem; display: flex; align-items: center; justify-content: center;">&#10095;</button>
       
-      <div class="buses-grid" id="busesGrid">
-        <!-- Unidad Gold -->
-        <div class="unit-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
-          <div class="unit-gallery">
-            <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
-            <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
-            <img src="Img/Fotos/Unidades/UNIDAD GOLD/Gold1_resultado.webp" alt="Gold 1" class="active">
-            <img src="Img/Fotos/Unidades/UNIDAD GOLD/Gold3_resultado.webp" alt="Gold 3">
-            <img src="Img/Fotos/Unidades/UNIDAD GOLD/Gold5_resultado.webp" alt="Gold 5">
-          </div>
-          <div class="unit-info">
-            <h3>UNIDAD GOLD ⚡️</h3>
-            <div class="unit-differential">Máquina de humo y Smart TV</div>
-            <div class="unit-features-wrapper">
-              <ul class="unit-features">
-                <li>Máquina de humo</li>
-                <li>4 cámaras de seguridad HD</li>
-                <li>Caño de Pole Dance</li>
-                <li>Smart TV con karaoke</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         <!-- Unidad Black -->
         <div class="unit-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
           <div class="unit-gallery">
@@ -224,32 +167,40 @@
           </div>
           <div class="unit-info">
             <h3>UNIDAD BLACK ⚡️</h3>
-            <div class="unit-differential">Estilo nocturno clásico</div>
+            <div class="unit-differential">Estilo clubber y minimalista</div>
             <div class="unit-features-wrapper">
               <ul class="unit-features">
+                <li>DJ en vivo y Pista de baile</li>
                 <li>Caño de Pole Dance</li>
+                <li>Cabezal LED giratorio y bola RGB</li>
+                <li>Luces láser audiorítmicas</li>
+                <li>Sonido envolvente con bajos y agudos</li>
               </ul>
             </div>
           </div>
         </div>
 
-        <!-- Unidad Brown UV -->
+        <!-- Unidad Gold -->
         <div class="unit-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
           <div class="unit-gallery">
             <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
             <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
-            <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown1_resultado.webp" alt="Brown 1" class="active">
-            <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown4_resultado.webp" alt="Brown 4">
-            <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown5_resultado.webp" alt="Brown 5">
+            <img src="Img/Fotos/Unidades/UNIDAD GOLD/Gold1_resultado.webp" alt="Gold 1" class="active">
+            <img src="Img/Fotos/Unidades/UNIDAD GOLD/Gold3_resultado.webp" alt="Gold 3">
+            <img src="Img/Fotos/Unidades/UNIDAD GOLD/Gold5_resultado.webp" alt="Gold 5">
           </div>
           <div class="unit-info">
-            <h3>UNIDAD BROWN UV ⚡️</h3>
-            <div class="unit-differential">Pintura flúor y luces neón</div>
+            <h3>UNIDAD GOLD ⚡️</h3>
+            <div class="unit-differential">Experiencia premium completa</div>
             <div class="unit-features-wrapper">
               <ul class="unit-features">
-                <li>Pintura interior reactiva a luz UV</li>
-                <li>Caño de Pole Dance</li>
-                
+                <li>DJ en vivo y Pista de baile</li>
+                <li>Máquina de humo y Caño de Pole Dance</li>
+                <li>4 cámaras de seguridad Full HD</li>
+                <li>Cabezal LED giratorio y bola RGB</li>
+                <li>Luces láser audiorítmicas</li>
+                <li>Sonido envolvente con bajos y agudos</li>
+                <li>Smart TV para videos y Karaoke</li>
               </ul>
             </div>
           </div>
@@ -266,10 +217,16 @@
           </div>
           <div class="unit-info">
             <h3>UNIDAD RED II ⚡️</h3>
-            <div class="unit-differential">Diseño vibrante y llamativo</div>
+            <div class="unit-differential">Energía y estilo urbano</div>
             <div class="unit-features-wrapper">
               <ul class="unit-features">
-                <li>Caño de Pole Dance</li>
+                <li>DJ en vivo y Pista de baile</li>
+                <li>Máquina de humo y Caño de Pole Dance</li>
+                <li>4 cámaras de seguridad Full HD</li>
+                <li>Cabezal LED giratorio y bola RGB</li>
+                <li>Luces láser audiorítmicas</li>
+                <li>Sonido envolvente con bajos y agudos</li>
+                <li>Smart TV para videos y Karaoke</li>
               </ul>
             </div>
           </div>
@@ -289,7 +246,40 @@
             <div class="unit-differential">Estética limpia y elegante</div>
             <div class="unit-features-wrapper">
               <ul class="unit-features">
-                <li>Caño de Pole Dance</li>
+                <li>DJ en vivo y Pista de baile</li>
+                <li>Máquina de humo y Caño de Pole Dance</li>
+                <li>4 cámaras de seguridad Full HD</li>
+                <li>Cabezal LED giratorio y bola RGB</li>
+                <li>Luces láser audiorítmicas</li>
+                <li>Sonido envolvente con bajos y agudos</li>
+                <li>Smart TV para videos y Karaoke</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unidad Brown UV -->
+        <div class="unit-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer;">
+          <div class="unit-gallery">
+            <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
+            <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
+            <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown1_resultado.webp" alt="Brown 1" class="active">
+            <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown4_resultado.webp" alt="Brown 4">
+            <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown5_resultado.webp" alt="Brown 5">
+          </div>
+          <div class="unit-info">
+            <h3>UNIDAD BROWN UV ⚡️</h3>
+            <div class="unit-differential">Pintura flúor y luces neón</div>
+            <div class="unit-features-wrapper">
+              <ul class="unit-features">
+                <li>Ambientación Flúor reactiva a UV</li>
+                <li>DJ en vivo y Pista de baile</li>
+                <li>Máquina de humo y Caño de Pole Dance</li>
+                <li>4 cámaras de seguridad Full HD</li>
+                <li>Cabezal LED giratorio y bola RGB</li>
+                <li>Luces láser audiorítmicas</li>
+                <li>Sonido envolvente con bajos y agudos</li>
+                <li>Smart TV para videos y Karaoke</li>
               </ul>
             </div>
           </div>
@@ -478,6 +468,40 @@
     </div>
   </section>
 
+  <!-- SECCIÓN ANIMACIÓN -->
+  <section id="animacion" style="padding: 60px 0; background: linear-gradient(180deg, rgba(5,11,31,0.5) 0%, rgba(13,25,60,0.8) 100%);">
+    <div class="container">
+      <h2 class="section-title">Animación & <span>Desafíos</span></h2>
+      <div class="infra-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+        <div class="glass-card" style="padding:30px; display: flex; flex-direction: column; height: 100%;">
+          <h3 style="margin-bottom: 20px; color: var(--accent); font-family: var(--font-title); font-size: 1.5rem;">Animación</h3>
+          <p style="margin-bottom: 20px; font-size: 1.1rem; line-height: 1.6; color:var(--text-muted);">Contamos con coordinadora/animadora para hacer que la experiencia sea aún más divertida, con juegos, interacción, baile y momentos súper entretenidos. La animación está incluida y es totalmente opcional.</p>
+          <div style="display:flex; gap:10px;">
+            <img src="Img/Fotos/Animacion/animacion 1_resultado.webp" alt="Animación 1" style="width: 50%; border-radius: 10px; object-fit: cover;">
+            <img src="Img/Fotos/Animacion/animacion 2 resultado.webp" alt="Animación 2" style="width: 50%; border-radius: 10px; object-fit: cover;">
+          </div>
+        </div>
+        <div class="glass-card" style="padding:30px; display: flex; flex-direction: column; height: 100%;">
+          <h3 style="margin-bottom: 20px; color: var(--accent); font-family: var(--font-title); font-size: 1.5rem;">Prendas</h3>
+          <ul style="list-style:none; padding:0; display:flex; flex-direction:column; justify-content:space-between; gap:20px; flex: 1;">
+            <li class="prenda-item" onclick="openPrenda('mozo')" style="display:flex; align-items:center; gap:15px; background:rgba(255,255,255,0.05); padding:15px; border-radius:10px;">
+              <div style="flex:1;">Conseguir una foto con un mozo 👆🏻</div>
+              <img src="Img/Fotos/Animacion/mozo2_resultado.webp" alt="Mozo" style="width:60px; height:60px; border-radius:5px; object-fit:cover;">
+            </li>
+            <li class="prenda-item" onclick="openPrenda('parabrisas')" style="display:flex; align-items:center; gap:15px; background:rgba(255,255,255,0.05); padding:15px; border-radius:10px;">
+              <div style="flex:1;">Conseguir limpiar un parabrisas 👆🏻</div>
+              <img src="Img/Fotos/Animacion/parabrisa_resultado.webp" alt="Parabrisas" style="width:60px; height:60px; border-radius:5px; object-fit:cover;">
+            </li>
+            <li class="prenda-item" onclick="openPrenda('pelado')" style="display:flex; align-items:center; gap:15px; background:rgba(255,255,255,0.05); padding:15px; border-radius:10px;">
+              <div style="flex:1;">Conseguir una foto con un pelado 👆🏻</div>
+              <img src="Img/Fotos/Animacion/pelado2_resultado.webp" alt="Pelado" style="width:60px; height:60px; border-radius:5px; object-fit:cover;">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SECCIÓN SHOWS EXTRAS -->
   <section id="shows">
     <div class="container">
@@ -618,32 +642,7 @@
           <div class="stepper-step active" id="step-1">
             <p class="step-description">Selecciona el Partybus ideal para tu noche. (Deslizá para ver más)</p>
             <div class="unit-scroll-container">
-              
-              <!-- Tarjeta Gold -->
-              <div class="unit-card" data-value="Unidad Gold" onclick="selectCard(this, 'unidad')">
-                <div class="unit-gallery">
-                  <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
-                  <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
-                  <img src="Img/Fotos/Unidades/UNIDAD GOLD/Gold1_resultado.webp" alt="Gold 1" class="active">
-                  <img src="Img/Fotos/Unidades/UNIDAD GOLD/Gold3_resultado.webp" alt="Gold 3">
-                  <img src="Img/Fotos/Unidades/UNIDAD GOLD/Gold5_resultado.webp" alt="Gold 5">
-                </div>
-                <div class="unit-info">
-                  <h3>UNIDAD GOLD ⚡️</h3>
-                  <div class="unit-differential">Máquina de humo y Smart TV</div>
-                  <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
-                  <div class="unit-features-wrapper">
-                    <ul class="unit-features">
-                      <li>Máquina de humo</li>
-                      <li>4 cámaras de seguridad HD</li>
-                      <li>Caño de Pole Dance</li>
-                      <li>Smart TV con karaoke</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Tarjeta Black -->
+              <!-- Unidad Black -->
               <div class="unit-card" data-value="Unidad Black" onclick="selectCard(this, 'unidad')">
                 <div class="unit-gallery">
                   <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
@@ -654,41 +653,48 @@
                 </div>
                 <div class="unit-info">
                   <h3>UNIDAD BLACK ⚡️</h3>
-                  <div class="unit-differential">Estilo nocturno clásico</div>
-                  <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
+                  <div class="unit-differential">Estilo clubber y minimalista</div>
+                  <button class="btn-expand" onclick="toggleDetails(event, this)" style="padding: 10px 15px; font-size: 1.1rem; border-radius: 8px;">Ver qué tiene ↓</button>
                   <div class="unit-features-wrapper">
                     <ul class="unit-features">
+                      <li>DJ en vivo y Pista de baile</li>
                       <li>Caño de Pole Dance</li>
-                      
+                      <li>Cabezal LED giratorio y bola RGB</li>
+                      <li>Luces láser audiorítmicas</li>
+                      <li>Sonido envolvente con bajos y agudos</li>
                     </ul>
                   </div>
                 </div>
               </div>
 
-              <!-- Tarjeta Brown UV -->
-              <div class="unit-card" data-value="Unidad Brown UV" onclick="selectCard(this, 'unidad')">
+              <!-- Unidad Gold -->
+              <div class="unit-card" data-value="Unidad Gold" onclick="selectCard(this, 'unidad')">
                 <div class="unit-gallery">
                   <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
                   <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
-                  <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown1_resultado.webp" alt="Brown 1" class="active">
-                  <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown4_resultado.webp" alt="Brown 4">
-                  <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown5_resultado.webp" alt="Brown 5">
+                  <img src="Img/Fotos/Unidades/UNIDAD GOLD/Gold1_resultado.webp" alt="Gold 1" class="active">
+                  <img src="Img/Fotos/Unidades/UNIDAD GOLD/Gold3_resultado.webp" alt="Gold 3">
+                  <img src="Img/Fotos/Unidades/UNIDAD GOLD/Gold5_resultado.webp" alt="Gold 5">
                 </div>
                 <div class="unit-info">
-                  <h3>UNIDAD BROWN UV ⚡️</h3>
-                  <div class="unit-differential">Pintura flúor y luces neón</div>
-                  <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
+                  <h3>UNIDAD GOLD ⚡️</h3>
+                  <div class="unit-differential">Experiencia premium completa</div>
+                  <button class="btn-expand" onclick="toggleDetails(event, this)" style="padding: 10px 15px; font-size: 1.1rem; border-radius: 8px;">Ver qué tiene ↓</button>
                   <div class="unit-features-wrapper">
                     <ul class="unit-features">
-                      <li>Pintura interior reactiva a luz UV</li>
-                      <li>Caño de Pole Dance</li>
-                      
+                      <li>DJ en vivo y Pista de baile</li>
+                      <li>Máquina de humo y Caño de Pole Dance</li>
+                      <li>4 cámaras de seguridad Full HD</li>
+                      <li>Cabezal LED giratorio y bola RGB</li>
+                      <li>Luces láser audiorítmicas</li>
+                      <li>Sonido envolvente con bajos y agudos</li>
+                      <li>Smart TV para videos y Karaoke</li>
                     </ul>
                   </div>
                 </div>
               </div>
 
-              <!-- Tarjeta Red II -->
+              <!-- Unidad Red II -->
               <div class="unit-card" data-value="Unidad Red II" onclick="selectCard(this, 'unidad')">
                 <div class="unit-gallery">
                   <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
@@ -699,18 +705,23 @@
                 </div>
                 <div class="unit-info">
                   <h3>UNIDAD RED II ⚡️</h3>
-                  <div class="unit-differential">Diseño vibrante y llamativo</div>
-                  <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
+                  <div class="unit-differential">Energía y estilo urbano</div>
+                  <button class="btn-expand" onclick="toggleDetails(event, this)" style="padding: 10px 15px; font-size: 1.1rem; border-radius: 8px;">Ver qué tiene ↓</button>
                   <div class="unit-features-wrapper">
                     <ul class="unit-features">
-                      <li>Caño de Pole Dance</li>
-                      
+                      <li>DJ en vivo y Pista de baile</li>
+                      <li>Máquina de humo y Caño de Pole Dance</li>
+                      <li>4 cámaras de seguridad Full HD</li>
+                      <li>Cabezal LED giratorio y bola RGB</li>
+                      <li>Luces láser audiorítmicas</li>
+                      <li>Sonido envolvente con bajos y agudos</li>
+                      <li>Smart TV para videos y Karaoke</li>
                     </ul>
                   </div>
                 </div>
               </div>
 
-              <!-- Tarjeta White -->
+              <!-- Unidad White -->
               <div class="unit-card" data-value="Unidad White" onclick="selectCard(this, 'unidad')">
                 <div class="unit-gallery">
                   <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
@@ -722,11 +733,44 @@
                 <div class="unit-info">
                   <h3>UNIDAD WHITE ⚡️</h3>
                   <div class="unit-differential">Estética limpia y elegante</div>
-                  <button class="btn-expand" onclick="toggleDetails(event, this)">Ver qué tiene ↓</button>
+                  <button class="btn-expand" onclick="toggleDetails(event, this)" style="padding: 10px 15px; font-size: 1.1rem; border-radius: 8px;">Ver qué tiene ↓</button>
                   <div class="unit-features-wrapper">
                     <ul class="unit-features">
-                      <li>Caño de Pole Dance</li>
-                      
+                      <li>DJ en vivo y Pista de baile</li>
+                      <li>Máquina de humo y Caño de Pole Dance</li>
+                      <li>4 cámaras de seguridad Full HD</li>
+                      <li>Cabezal LED giratorio y bola RGB</li>
+                      <li>Luces láser audiorítmicas</li>
+                      <li>Sonido envolvente con bajos y agudos</li>
+                      <li>Smart TV para videos y Karaoke</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Unidad Brown UV -->
+              <div class="unit-card" data-value="Unidad Brown UV" onclick="selectCard(this, 'unidad')">
+                <div class="unit-gallery">
+                  <button class="gallery-nav prev" onclick="changeImage(event, this, -1)">&#10094;</button>
+                  <button class="gallery-nav next" onclick="changeImage(event, this, 1)">&#10095;</button>
+                  <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown1_resultado.webp" alt="Brown 1" class="active">
+                  <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown4_resultado.webp" alt="Brown 4">
+                  <img src="Img/Fotos/Unidades/UNIDAD BROWN UV/brown5_resultado.webp" alt="Brown 5">
+                </div>
+                <div class="unit-info">
+                  <h3>UNIDAD BROWN UV ⚡️</h3>
+                  <div class="unit-differential">Pintura flúor y luces neón</div>
+                  <button class="btn-expand" onclick="toggleDetails(event, this)" style="padding: 10px 15px; font-size: 1.1rem; border-radius: 8px;">Ver qué tiene ↓</button>
+                  <div class="unit-features-wrapper">
+                    <ul class="unit-features">
+                      <li>Ambientación Flúor reactiva a UV</li>
+                      <li>DJ en vivo y Pista de baile</li>
+                      <li>Máquina de humo y Caño de Pole Dance</li>
+                      <li>4 cámaras de seguridad Full HD</li>
+                      <li>Cabezal LED giratorio y bola RGB</li>
+                      <li>Luces láser audiorítmicas</li>
+                      <li>Sonido envolvente con bajos y agudos</li>
+                      <li>Smart TV para videos y Karaoke</li>
                     </ul>
                   </div>
                 </div>
@@ -1017,7 +1061,7 @@
 
   <!-- MODAL DE GALERÍAS (Fotos, Monumentos, Personajes) -->
   <div class="modal-overlay" id="gallery-modal">
-    <div class="modal-close" onclick="closeModal('gallery-modal')">&times;</div>
+    <div class="modal-close" onclick="closeModal('gallery-modal')"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Volver</div>
     <div class="modal-content">
       <div class="modal-grid" id="gallery-grid"></div>
     </div>
@@ -1025,7 +1069,7 @@
 
   <!-- MODAL DE DETALLES DE EXPERIENCIA -->
   <div class="modal-overlay" id="exp-modal">
-    <div class="modal-close" onclick="closeModal('exp-modal')">&times;</div>
+    <div class="modal-close" onclick="closeModal('exp-modal')"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Volver</div>
     <div class="modal-content">
       <div class="modal-body">
         <h2 id="exp-title"></h2>
@@ -1084,7 +1128,7 @@
 
   <!-- Universal Lightbox HTML -->
   <div id="universal-lightbox" tabindex="-1" aria-modal="true" role="dialog">
-    <span class="close-lightbox">&times;</span>
+    <span class="close-lightbox" style="display:flex; align-items:center; gap:5px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Volver</span>
     <div id="lightbox-content"></div>
   </div>
 
@@ -1147,11 +1191,11 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
           Preguntas Frecuentes
         </span>
-        <button id="closeHelpModal" style="background:none; border:none; color:var(--bg-deep); font-size:1.5rem; cursor:pointer; line-height:1;">&times;</button>
+        <button id="closeHelpModal" style="background:none; border:none; color:var(--bg-deep); font-size:1rem; font-weight:bold; cursor:pointer; line-height:1; display:flex; align-items:center; gap:5px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Volver</button>
       </div>
       <div style="padding: 20px; overflow-y:auto; flex:1;">
         <!-- PREGUNTAS FRECUENTES PRO -->
-  <div id="faq" class="faq-pro-section">
+  <div id="faq" class="faq-pro-section" style="padding: 0; background: none;">
     <div class="container" style="padding:0;">
       <div class="section-header-pro" style="display:none;">
         <h2 class="section-title">Preguntas <span>Frecuentes</span></h2>
@@ -1333,7 +1377,7 @@
 
   <!-- Universal Lightbox HTML -->
   <div id="universal-lightbox" tabindex="-1" aria-modal="true" role="dialog">
-    <span class="close-lightbox">&times;</span>
+    <span class="close-lightbox" style="display:flex; align-items:center; gap:5px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Volver</span>
     <div id="lightbox-content"></div>
   </div>
 
@@ -1409,7 +1453,7 @@
   <!-- MODAL DE PRENDAS -->
   <div id="prendaModalWrapper">
     <div class="prenda-modal-content">
-      <button onclick="closePrenda()" style="position:absolute; top:15px; right:15px; background:none; border:none; color:#fff; font-size:2rem; cursor:pointer;">&times;</button>
+      <button onclick="closePrenda()" style="position:absolute; top:15px; right:15px; background:none; border:none; color:#fff; font-size:1rem; cursor:pointer; display:flex; align-items:center; gap:5px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Volver</button>
       <h3 id="prendaTitle" style="color: var(--accent); margin-bottom: 10px; font-family: var(--font-title); font-size: 1.2rem; margin-top:5px;"></h3>
       <p id="prendaDesc" style="color: var(--text-muted); margin-bottom: 15px; font-size: 0.9rem; line-height: 1.5;"></p>
       <div id="prendaMediaContainer" style="width:100%; border-radius:10px; overflow:hidden;"></div>
