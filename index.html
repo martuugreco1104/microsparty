@@ -50,6 +50,7 @@
       </a>
       <a href="#cotizar" class="btn btn-primary mobile-cta">Cotizar Fecha</a>
       <nav id="main-nav" style="display: flex; align-items: center; gap: 28px;">
+        <a href="#buses" class="nav-link" onclick="document.getElementById('main-nav').classList.remove('active')">Unidades</a>
         <a href="#experiencias" class="nav-link" onclick="document.getElementById('main-nav').classList.remove('active')">Festejos</a>
         <a href="#recorrido" class="nav-link" onclick="document.getElementById('main-nav').classList.remove('active')">Paradas icónicas</a>
         <a href="#shows" class="nav-link" onclick="document.getElementById('main-nav').classList.remove('active')">Shows</a>
@@ -1077,7 +1078,7 @@
 
   <!-- MODAL DE GALERÍAS (Fotos, Monumentos, Personajes) -->
   <div class="modal-overlay" id="gallery-modal">
-    <div class="modal-close" onclick="closeModal('gallery-modal')"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Volver</div>
+    <div class="modal-close" onclick="closeModal('gallery-modal')"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></div>
     <div class="modal-content">
       <div class="modal-grid" id="gallery-grid"></div>
     </div>
@@ -1085,7 +1086,7 @@
 
   <!-- MODAL DE DETALLES DE EXPERIENCIA -->
   <div class="modal-overlay" id="exp-modal">
-    <div class="modal-close" onclick="closeModal('exp-modal')"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Volver</div>
+    <div class="modal-close" onclick="closeModal('exp-modal')"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></div>
     <div class="modal-content">
       <div class="modal-body">
         <h2 id="exp-title"></h2>
@@ -1144,7 +1145,7 @@
 
   <!-- Universal Lightbox HTML -->
   <div id="universal-lightbox" tabindex="-1" aria-modal="true" role="dialog">
-    <span class="close-lightbox" style="display:flex; align-items:center; gap:5px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Volver</span>
+    <span class="close-lightbox" style="display:flex; align-items:center; gap:5px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></span>
     <div id="lightbox-content"></div>
   </div>
 
@@ -1207,7 +1208,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
           Preguntas Frecuentes
         </span>
-        <button id="closeHelpModal" style="background:none; border:none; color:var(--bg-deep); font-size:1rem; font-weight:bold; cursor:pointer; line-height:1; display:flex; align-items:center; gap:5px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Volver</button>
+        <button id="closeHelpModal" style="background:none; border:none; color:var(--bg-deep); font-size:1rem; font-weight:bold; cursor:pointer; line-height:1; display:flex; align-items:center; gap:5px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></button>
       </div>
       <div style="padding: 20px; overflow-y:auto; flex:1;">
         <!-- PREGUNTAS FRECUENTES PRO -->
@@ -1393,7 +1394,7 @@
 
   <!-- Universal Lightbox HTML -->
   <div id="universal-lightbox" tabindex="-1" aria-modal="true" role="dialog">
-    <span class="close-lightbox" style="display:flex; align-items:center; gap:5px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Volver</span>
+    <span class="close-lightbox" style="display:flex; align-items:center; gap:5px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></span>
     <div id="lightbox-content"></div>
   </div>
 
@@ -1469,7 +1470,7 @@
   <!-- MODAL DE PRENDAS -->
   <div id="prendaModalWrapper">
     <div class="prenda-modal-content">
-      <button onclick="closePrenda()" style="position:absolute; top:15px; right:15px; background:none; border:none; color:#fff; font-size:1rem; cursor:pointer; display:flex; align-items:center; gap:5px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Volver</button>
+      <button onclick="closePrenda()" style="position:absolute; top:15px; right:15px; background:none; border:none; color:#fff; font-size:1rem; cursor:pointer; display:flex; align-items:center; gap:5px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></button>
       <h3 id="prendaTitle" style="color: var(--accent); margin-bottom: 10px; font-family: var(--font-title); font-size: 1.2rem; margin-top:5px;"></h3>
       <p id="prendaDesc" style="color: var(--text-muted); margin-bottom: 15px; font-size: 0.9rem; line-height: 1.5;"></p>
       <div id="prendaMediaContainer" style="width:100%; border-radius:10px; overflow:hidden;"></div>

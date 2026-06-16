@@ -423,7 +423,7 @@
 
       // Interceptar clics en imágenes para abrirlas en pantalla grande
       if (e.target.tagName === 'IMG' && 
-          !e.target.closest('a.logo') && 
+          !e.target.closest('.logo') && 
           !e.target.closest('.show-avatar') &&
           !e.target.closest('.show-avatar-checkbox') &&
           !e.target.closest('.hero-split') &&
