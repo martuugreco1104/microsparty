@@ -1139,3 +1139,30 @@
   line-height: 1.6 !important;
   color: var(--text-muted) !important;
 }
+
+/* MOBILE MENU TWEAKS */
+@media (max-width: 768px) {
+  .mobile-menu-close {
+    display: block !important;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+  }
+  #main-nav .nav-link { margin-bottom: 5px; }
+  /* Push Instagram and Cotizar down */
+  #main-nav .nav-link[href="https://www.instagram.com/micros.party/"] {
+    margin-top: auto !important;
+  }
+  #main-nav { padding-bottom: 40px !important; }
+}
+
+/* COTIZADOR CARDS FIX */
+#paso1 .bus-card {
+  min-width: 0 !important;
+  width: 100% !important;
+}

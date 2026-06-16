@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Manejo de botones de expansión de tarjeta
   window.toggleDetails = function(event, buttonElement) {
     event.stopPropagation(); // Evitar seleccionar la tarjeta entera al cliquear el botón
-    const card = buttonElement.closest('.unit-card');
+    const card = buttonElement.closest('.bus-card, .unit-card');
     card.classList.toggle('expanded');
     
     if (card.classList.contains('expanded')) {
