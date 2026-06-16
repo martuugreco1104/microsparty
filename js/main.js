@@ -408,6 +408,11 @@
         if (e.target.id === 'helpModalWrapper') e.target.style.display = 'none';
       }
 
+      // Prevenir lightbox si se hace click en el video o la mitad de contenido del hero (hero-split)
+      if (e.target.closest('.hero-split')) {
+        return;
+      }
+
       // Interceptar clics en imágenes de Nuestros Buses para abrir carrusel global
       if (e.target.tagName === 'IMG' && e.target.closest('#buses') && e.target.closest('.unit-card')) {
         e.stopPropagation();

@@ -1091,3 +1091,10 @@
   border-color: var(--accent);
   box-shadow: 0 4px 15px rgba(136, 209, 196, 0.1);
 }
+.prenda-item.active .prenda-content {
+  max-height: 300px !important;
+  margin-top: 15px;
+}
+.prenda-item.active .prenda-arrow {
+  transform: rotate(180deg);
+}
