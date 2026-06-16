@@ -4,7 +4,7 @@
     const infraImages = {
       sonido: ["Img/Fotos/Micros/webp/micros10_resultado.webp", "Img/Fotos/Micros/webp/micros2_resultado.webp", "Img/Fotos/Micros/webp/micros3_resultado.webp"],
       efectos: ["Img/Fotos/Micros/webp/micros12_resultado.webp", "Img/Fotos/Micros/webp/micros8_resultado.webp", "Img/Fotos/Micros/webp/micros16_resultado.webp"],
-      pista: ["Img/Fotos/karaoke/karaoke1.mp4"]
+      pista: []
     };
 
     function updateCarousel(type) {
@@ -69,7 +69,7 @@
       spider: ["Img/Fotos/Personajes/webp/spider&drag_resultado.webp", "Img/Fotos/Personajes/webp/spider&drag2_resultado.webp"],
       messi: ["Img/Fotos/Personajes/webp/messi1_resultado.webp", "Img/Fotos/Personajes/webp/messi2_resultado.webp", "Img/Fotos/Personajes/webp/messi3_resultado.webp", "Img/Fotos/Personajes/webp/messi4_resultado.webp", "Img/Fotos/Personajes/webp/messi&mickey_resultado.webp"],
       milei: ["Img/Fotos/Personajes/webp/milei_resultado.webp", "Img/Fotos/Personajes/webp/milei2_resultado.webp", "Img/Fotos/Personajes/webp/mileivideo.MOV"],
-      robot: ["Img/Fotos/Personajes/webp/robot_resultado.webp", "Img/Fotos/Personajes/webp/robot2.mp4"],
+      robot: ["Img/Fotos/Personajes/webp/robot_resultado.webp", "webp restantes/robot2_resultado.webp"],
       bizarrap: ["Img/Fotos/Personajes/biza_convertir_resultado.webp"],
       enanos: ["Img/Fotos/Personajes/enano_convertir_resultado.webp", "Img/Fotos/Personajes/enano2_convertir_resultado.webp"],
       stripper: []
@@ -229,7 +229,7 @@
           "Img/Fotos/Kids/kids6_resultado.webp",
           "Img/Fotos/Kids/kids7_resultado.webp",
           "Img/Fotos/Kids/kids11_resultado.webp",
-          "Img/Fotos/Kids/kids10.mp4"
+          "webp restantes/kids10_resultado.webp"
         ],
         features: ["Requiere adulto responsable a bordo", "Volumen moderado", "Micrófonos y Just Dance Kids"],
         extras: ["Show de Spiderman o Mickey", "Animación infantil especializada"]
@@ -252,7 +252,7 @@
         title: "Egresados Secundarios & Murgas (10% OFF)",
         desc: "La previa definitiva de la Fiesta de Egresados (FDE) o el UPD. Hacemos el traslado al salón o al colegio a pura música y cánticos. Seguridad garantizada.",
         gallery: [
-          "Img/Fotos/Egresados/egresados16portada.jpg",
+          "Img/Fotos/Egresados/egresados16portada_resultado.webp",
           "Img/Fotos/Egresados/egresadas_resultado.webp",
           "Img/Fotos/Egresados/egresados10_resultado.webp",
           "Img/Fotos/Egresados/egresados11_resultado.webp",
@@ -266,11 +266,11 @@
           "Img/Fotos/Egresados/egresados6_resultado.webp",
           "Img/Fotos/Egresados/egresados8_resultado.webp",
           "Img/Fotos/Egresados/egresados9_resultado.webp",
-          "Img/Fotos/Egresados/egresados1.mp4",
-          "Img/Fotos/Egresados/egresados4.mp4",
-          "Img/Fotos/Egresados/egresados7.mp4",
-          "Img/Fotos/Egresados/egresados17.mp4",
-          "Img/Fotos/Egresados/egresados19.mp4"
+          "webp restantes/egresados1_resultado.webp",
+          "webp restantes/egresados4_resultado.webp",
+          "webp restantes/egresados7_resultado.webp",
+          "webp restantes/egresados17_resultado.webp",
+          "webp restantes/egresados19_resultado.webp"
         ],
         features: ["Capacidad: Hasta 40 pasajeros (viaje seguro)", "Choferes habilitados VTV", "Habilitación GCBA al día", "10% OFF"],
         extras: ["Humo y luces potentes", "Traslados extendidos"]
@@ -283,9 +283,9 @@
           "Img/Fotos/recibidas/recibidacontadora03_resultado.webp",
           "Img/Fotos/recibidas/recibidacontadora2_resultado.webp",
           "Img/Fotos/recibidas/recibidamedica2_resultado.webp",
-          "Img/Fotos/recibidas/recibidacontadora.mp4",
-          "Img/Fotos/recibidas/recibidamedica.mp4",
-          "Img/Fotos/recibidas/recibidavideo.mp4",
+          "webp restantes/recibidacontadora_resultado.webp",
+          "webp restantes/recibidamedica_resultado.webp",
+          "webp restantes/recibidavideo_resultado.webp",
           "Img/Fotos/recibidas/reel recibida.mp4"
         ],
         features: ["Paradas fotográficas con la familia", "Música para celebrar la meta", "Súper flexible en horarios"],
