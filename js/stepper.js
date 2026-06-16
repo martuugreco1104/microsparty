@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.selectCard = function(element, key) {
-    document.querySelectorAll('.unit-card').forEach(el => el.classList.remove('selected'));
+    document.querySelectorAll('.unit-card, .bus-card').forEach(el => el.classList.remove('selected'));
     element.classList.add('selected');
     budgetData[key] = element.getAttribute('data-value');
   }
