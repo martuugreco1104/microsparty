@@ -50,9 +50,58 @@ document.addEventListener('DOMContentLoaded', () => {
       btnNext.style.boxShadow = "0 0 15px rgba(136, 209, 196, 0.4)";
       btnNext.classList.remove('pulse-wa');
     }
+
+    // Restaurar selección visual al volver a pasos anteriores
+    if (currentStep === 1 && budgetData.unidad) {
+      document.querySelectorAll('.bus-card').forEach(card => {
+        card.classList.toggle('selected', card.getAttribute('data-value') === budgetData.unidad);
+      });
+    }
+    if (currentStep === 2 && budgetData.evento) {
+      document.querySelectorAll('.option-btn').forEach(btn => {
+        btn.classList.toggle('selected', btn.getAttribute('data-value') === budgetData.evento);
+      });
+    }
   }
 
   window.nextStep = function() {
+    // Validar selección obligatoria antes de avanzar
+    if (currentStep === 1 && !budgetData.unidad) {
+      const step1 = document.getElementById('step-1');
+      step1.style.animation = 'none';
+      step1.offsetHeight; // reflow
+      step1.style.animation = 'shake 0.3s ease';
+      // Agregar estilos de shake si no existen
+      if (!document.getElementById('shake-style')) {
+        const style = document.createElement('style');
+        style.id = 'shake-style';
+        style.textContent = '@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }';
+        document.head.appendChild(style);
+      }
+      const msg = document.getElementById('stepper-validation-msg');
+      if (msg) { msg.style.display = 'block'; msg.innerText = '⚠️ Seleccioná una unidad para continuar.'; }
+      return;
+    }
+    if (currentStep === 2 && !budgetData.evento) {
+      if (!document.getElementById('shake-style')) {
+        const style = document.createElement('style');
+        style.id = 'shake-style';
+        style.textContent = '@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }';
+        document.head.appendChild(style);
+      }
+      const step2 = document.getElementById('step-2');
+      step2.style.animation = 'none';
+      step2.offsetHeight;
+      step2.style.animation = 'shake 0.3s ease';
+      const msg = document.getElementById('stepper-validation-msg');
+      if (msg) { msg.style.display = 'block'; msg.innerText = '⚠️ Seleccioná un tipo de evento para continuar.'; }
+      return;
+    }
+
+    // Ocultar mensaje de validación al avanzar exitosamente
+    const msg = document.getElementById('stepper-validation-msg');
+    if (msg) msg.style.display = 'none';
+
     if (currentStep < TOTAL_STEPS) {
       currentStep++;
       updateStepperUI();
@@ -60,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
       compileAndSendWhatsApp();
     }
   }
+
 
   window.prevStep = function() {
     if (currentStep > 1) {
